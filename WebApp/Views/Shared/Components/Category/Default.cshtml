@@ -1,0 +1,17 @@
+﻿@model List<WebApp.Models.Category>
+
+@{
+    ViewData["Title"] = "Category Component";
+}
+
+<ul class="list">
+
+    @foreach(var category in Model)
+    {
+        <li>
+            <a asp-controller="Home" asp-action="ByCategory" asp-route-categoryId="@category.Id">
+                @category.Name
+            </a>
+        </li>
+    }
+</ul>
