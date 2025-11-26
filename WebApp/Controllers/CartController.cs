@@ -18,13 +18,11 @@ namespace WebApp.Controllers
         }
         public IActionResult Index(string id)
         {
-            List<OrderProduct> orderProducts = _context.Orders
-               .Where(o => o.UserId == id)           
-               .SelectMany(o => o.OrderProducts)
-               .Include(o => o.Product)
-               .ToList();
-
-            return View(orderProducts);
+            Order? order = _context.Orders?
+                .Include(o => o.OrderProducts)
+                .ThenInclude(op => op.Product)
+                .FirstOrDefault(o => o.UserId == id);
+            return View(order);
         }
 
         public IActionResult Add(int productId, string returnUrl, string queryString, int quantity = 1)
@@ -82,6 +80,19 @@ namespace WebApp.Controllers
                 returnUrl = Url.Content("~") + returnUrl + queryString;
             }
             return Redirect(returnUrl);
+        }
+
+        public IActionResult Update(int id, string returnUrl, string queryString)
+        {
+            Order? order = _context.Orders?
+                .Include(o => o.OrderProducts)
+                .ThenInclude(op => op.Product)
+                .FirstOrDefault(o => o.Id == id); 
+            if (order != null)
+            {
+
+            }
+            return View("Index", order);
         }
     }
 }

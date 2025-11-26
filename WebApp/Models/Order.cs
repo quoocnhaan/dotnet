@@ -11,5 +11,12 @@ namespace WebApp.Models
         public string? Status { get; set; }
         public DateTime? CreatedAt { get; set; }
         public ICollection<OrderProduct>? OrderProducts { get; set; }
+    
+
+    public double GetTotal()
+        {
+            return OrderProducts?.Sum(op => op.GetTotal()) ?? 0;
+
+        }
     }
 }
