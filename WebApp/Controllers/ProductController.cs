@@ -1,17 +1,17 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using WebApp.Data;
 using WebApp.Models;
 
 namespace WebApp.Controllers
 {
-    public class ProductController : Controller
+    public class ProductController : BaseController
     {
-        private readonly AppDBContext _context;
 
-        public ProductController(AppDBContext context)
+        public ProductController(UserManager<AppUser> userManager, AppDBContext context)
+            : base(userManager, context)
         {
-            _context = context;
         }
         public IActionResult Detail(int id)
         {
@@ -22,7 +22,21 @@ namespace WebApp.Controllers
             if (product == null)
                 return NotFound();
 
+            SetCartProductCount();
             return View(product);
+        }
+
+        private void SetCartProductCount()
+        {
+            var currentUser = _userManager.GetUserAsync(User).Result;
+            if (currentUser != null)
+            {
+                int? cartProductCount = _context.Orders
+                    .Where(o => o.UserId == currentUser.Id)
+                    .SelectMany(o => o.OrderProducts)
+                    .Sum(op => op.Quantity);
+                TempData["CartProductCount"] = cartProductCount;
+            }
         }
     }
 }

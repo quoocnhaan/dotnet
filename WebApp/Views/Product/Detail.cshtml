@@ -4,8 +4,6 @@
     ViewData["Title"] = "Product Detail";
 }
 
-
-<div class="product_image_area">
     <div class="container">
         <div class="row s_product_inner">
             <div class="col-lg-6">
@@ -14,19 +12,19 @@
                          class="carousel slide"
                          data-ride="carousel">
                         <ol class="carousel-indicators">
-                            @* <li data-target="#carouselExampleIndicators"
+                            <li data-target="#carouselExampleIndicators"
                                 data-slide-to="0"
                                 class="active">
-                                <img src="@Url.Content("~/" + Model.ImageUrl)" alt="Product Image" />
+                                <img src="~/img/product/single-product/s-product-s-2.jpg" alt="" />
                             </li>
                             <li data-target="#carouselExampleIndicators"
                                 data-slide-to="1">
-                                <img src="@Url.Content("~/" + Model.ImageUrl)" alt="Product Image" />
+                                <img src="~/img/product/single-product/s-product-s-2.jpg" alt="" />
                             </li>
                             <li data-target="#carouselExampleIndicators"
                                 data-slide-to="2">
-                                <img src="@Url.Content("~/" + Model.ImageUrl)" alt="Product Image" />
-                            </li> *@
+                                <img src="~/img/product/single-product/s-product-s-2.jpg" alt="" />
+                            </li>
                         </ol>
                         <div class="carousel-inner">
                             <div class="carousel-item active">
@@ -74,76 +72,68 @@
                             }
                             else
                             {
-                                <a href="#"> <span>Availibility</span> : Out of Stock</a>
+                                <a href="#">
+                                    <span style="color: red;">Availability</span> : Out of Stock
+                                </a>
                             }
                         </li>
                     </ul>
                     <p>
                       @Model.Description
                     </p>
-                    @* <div class="product_count">
-                        <label for="qty">Quantity:</label>
-                        <input type="text"
-                               name="qty"
-                               id="sst"
-                               min="1"
-                               max=@Model.Quantity
-                               maxlength="12"
-                               value="1"
-                               title="Quantity:"
-                               class="input-text qty" />
-                        <button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst )) result.value++;return false;"
-                                class="increase items-count"
-                                type="button">
-                            <i class="lnr lnr-chevron-up"></i>
-                        </button>
-                        <button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst ) &amp;&amp; sst > 0 ) result.value--;return false;"
-                                class="reduced items-count"
-                                type="button">
-                            <i class="lnr lnr-chevron-down"></i>
-                        </button>
-                    </div> *@
+                    <form method="get" asp-controller="Cart" asp-action="Add" asp-route-productId="@Model.Id" class="card_area_form">
+                        <div class="product_count">
+                            <label for="sst">Quantity:</label>
+                            <input type="hidden" name="productId" value="@Model.Id" />
+                            <input type="hidden" name="returnUrl" value="@Context.Request.Path" />
+                            <input type="number"
+                                   name="quantity"
+                                   id="sst"
+                                   maxlength="12"
+                                   value="1"
+                                   min="1"
+                                   max="@Model.Quantity"
+                                   title="Quantity:"
+                                   class="input-text qty"
+                                   oninput="let max=@Model.Quantity;
+                                   if(this.value> max) this.value = max;
+                                   if(this.value < 1) this.value = 1;" />
+                            <button type="button" class="increase items-count"
+                                    onclick="var result = document.getElementById('sst');
+                                    var sst=parseInt(result.value);
+                                    if (!isNaN(sst) && sst < @Model.Quantity) { result.value = sst + 1;} return false;">
+                                    <i class="lnr lnr-chevron-up"></i>
+                            </button>
+                            <button type="button" class="reduced items-count"
+                                    onclick="var result = document.getElementById('sst');
+                                    var sst=parseInt(result.value);
+                                    if (!isNaN(sst) && sst > 1) { result.value = sst - 1;} return false;">
+                                    <i class="lnr lnr-chevron-down"></i>
+                            </button>
+                        </div>
 
-                    <div class="product_count">
-                        <label for="qty">Quantity:</label>
-                        <input type="text"
-                               name="qty"
-                               id="sst"
-                               maxlength="12"
-                               value="1"
-                               title="Quantity:"
-                               class="input-text qty" />
-                        <button onclick="var result = document.getElementById('sst');
-                                var sst=parseInt(result.value);
-                                if (!isNaN(sst) && sst < @Model.Quantity) result.value = sst + 1; return false;"
-                                class="increase items-count"type="button">
-                            <i class="lnr lnr-chevron-up"></i>
-                        </button>
-                        <button onclick="var result = document.getElementById('sst');
-                                var sst=parseInt(result.value);
-                                if (!isNaN(sst) && sst>
-                            1) result.value = sst - 1;
-                            return false;"
-                            class="reduced items-count"
-                            type="button"
-                            >
-                            <i class="lnr lnr-chevron-down"></i>
-                        </button>
-                    </div>
+                        <div class="card_area">
+
+                            @if (Model.Quantity > 0)
+                            {
+                                <button type="submit" class="main_btn">Add to Cart</button>
+                            }
+                            else
+                            {
+                                <button type="submit"
+                                        class="main_btn"
+                                        disabled
+                                        style="cursor: not-allowed; opacity: 0.5; background-color: #ccc; color: #666; border: 1px solid #999;">
+                                    Add to Cart
+                                </button>
+                            }
+                        </div>
+
+                    </form>
 
 
-                    <div class="card_area">
-                        <a class="main_btn" href="#">Add to Cart</a>
-                        <a class="icon_btn" href="#">
-                            <i class="lnr lnr lnr-diamond"></i>
-                        </a>
-                        <a class="icon_btn" href="#">
-                            <i class="lnr lnr lnr-heart"></i>
-                        </a>
-                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 

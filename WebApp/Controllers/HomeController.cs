@@ -1,25 +1,30 @@
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.CodeAnalysis;
 using Microsoft.EntityFrameworkCore;
+using System;
 using System.Diagnostics;
+using WebApp.Common.Constants;
 using WebApp.Data;
 using WebApp.Models;
 
 namespace WebApp.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : BaseController
     {
-        private readonly ILogger<HomeController> _logger;
-        private readonly AppDBContext _context;
 
-        public HomeController(ILogger<HomeController> logger, AppDBContext context)
+
+        public HomeController(UserManager<AppUser> userManager, AppDBContext context)
+            : base(userManager, context)
         {
-            _logger = logger;
-            _context = context;
         }
+
 
         public IActionResult Index()
         {           
-            List<Product> products = _context.Products.ToList(); 
+            List<Product> products = _context.Products.ToList();
+            SetCartProductCount();
+
             return View(products);
         }
 
@@ -29,6 +34,8 @@ namespace WebApp.Controllers
                              .Where(p => p.CategoryId == categoryId)
                              .Include(p => p.Category)
                              .ToListAsync();
+
+            SetCartProductCount();
 
             return View("Index", products);
         }

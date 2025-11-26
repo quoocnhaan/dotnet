@@ -13,9 +13,9 @@ builder.Services.AddDbContext<AppDBContext>(options =>
     options.UseSqlServer(connectionString));
 
 // Add Identity services
-builder.Services.AddDefaultIdentity<IdentityUser>(options =>
+builder.Services.AddDefaultIdentity<AppUser>(options =>
 {
-    options.SignIn.RequireConfirmedAccount = true;
+    options.SignIn.RequireConfirmedAccount = false;
 })
 .AddEntityFrameworkStores<AppDBContext>();
 
@@ -39,6 +39,7 @@ app.UseRouting();
 
 // **Add authentication and authorization middleware**
 app.UseAuthentication();
+
 app.UseAuthorization();
 
 // Map routes

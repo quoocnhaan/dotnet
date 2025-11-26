@@ -1,27 +1,68 @@
 ﻿@using Microsoft.AspNetCore.Identity
+@using WebApp.Data
 
-@inject SignInManager<IdentityUser> SignInManager
-@inject UserManager<IdentityUser> UserManager
+@inject SignInManager<AppUser> SignInManager
+@inject UserManager<AppUser> UserManager
 
-<ul class="navbar-nav">
+@{
+    int productCount = TempData["CartProductCount"] != null ? Convert.ToInt32(TempData["CartProductCount"]): 0;
+    string userId = null;
+    if (SignInManager.IsSignedIn(User))
+    {
+        var user = await UserManager.GetUserAsync(User);
+        userId = user?.Id;
+    }
+}
+
+<ul class="nav navbar-nav navbar-right right_nav pull-right">
+    <li class="nav-item">
+        <a href="#" class="icons">
+            <i class="ti-search" aria-hidden="true"></i>
+        </a>
+    </li>
+
 @if (SignInManager.IsSignedIn(User))
 {
-    <li class="nav-item">
-        <a id="manage" class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Hello @UserManager.GetUserName(User)!</a>
-    </li>
-    <li class="nav-item">
-        <form id="logoutForm" class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
-            <button id="logout" type="submit" class="nav-link btn btn-link text-dark border-0">Logout</button>
-        </form>
-    </li>
+        <li class="nav-item">
+            <a asp-controller="Cart" asp-action="Index" asp-route-id="@userId" class="icons">
+                <i class="ti-shopping-cart"></i>
+                @if (productCount > 0)
+                {
+                    <span>(@productCount)</span>
+                }
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a href="#" class="icons">
+                <i class="ti-user" aria-hidden="true"></i>
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a href="#" class="icons">
+                <i class="ti-heart" aria-hidden="true"></i>
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a asp-controller="User" asp-action="Logout" class="icons">
+                <i  aria-hidden="true">Logout</i>
+            </a>
+        </li>
 }
 else
 {
-    <li class="nav-item">
-        <a class="nav-link text-dark" id="register" asp-area="Identity" asp-page="/Account/Register">Register</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link text-dark" id="login" asp-area="Identity" asp-page="/Account/Login">Login</a>
-    </li>
+        <li class="nav-item">
+            <a asp-controller="User" asp-action="Login" class="icons">
+                <i aria-hidden="true">Login</i>
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a asp-controller="User" asp-action="Register" class="icons">
+                <i aria-hidden="true">Register</i>
+            </a>
+        </li>
 }
 </ul>

@@ -4,7 +4,7 @@ using WebApp.Models;
 
 namespace WebApp.Data
 {
-    public class AppDBContext : IdentityDbContext
+    public class AppDBContext : IdentityDbContext<AppUser>
     {
         public AppDBContext(DbContextOptions<AppDBContext> options)
     : base(options)

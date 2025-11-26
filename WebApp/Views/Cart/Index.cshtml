@@ -1,0 +1,177 @@
+﻿@model List<OrderProduct>
+
+@{
+    ViewData["Title"] = "Cart Index";
+}
+<div class="container">
+    <div class="cart_inner">
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Product</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Quantity</th>
+                        <th scope="col">Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var orderProduct in Model)
+                    {
+                        <tr>
+                            <td>
+                                <div class="media">
+                                    <div class="d-flex">
+                                        <img src="@Url.Content("~/" + orderProduct.Product?.ImageUrl)" alt="@orderProduct.Product?.Name" style="width:80px;height:auto;" />
+                                    </div>
+                                    <div class="media-body">
+                                        <p>@orderProduct.Product?.Name</p>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <h5>@orderProduct.Product?.GetPriceAfterDiscount().ToString("C")</h5>
+                            </td>
+                            @* <td>
+                                <div class="product_count">
+                                    <label for="sst_@orderProduct.Product?.Id">Quantity:</label>
+                                    <input type="hidden" name="productId" value="@orderProduct.Product?.Id" />
+                                    <input type="hidden" name="returnUrl" value="@Context.Request.Path" />
+                                    <input type="number"
+                                           name="quantity"
+                                           id="sst_@orderProduct.Product?.Id"
+                                           maxlength="12"
+                                           value=@orderProduct.Quantity
+                                           min="0"
+                                           max="@@orderProduct.Product?.Quantity"
+                                           title="Quantity:"
+                                           class="input-text qty"
+                                           oninput="let max=@orderProduct.Product?.Quantity; if(this.value> max) this.value = max; if(this.value < 1) this.value = 1;" />
+                                    <button type="button" class="increase items-count"
+                                            onclick="var result = document.getElementById('sst_@orderProduct.Product?.Id'); var sst=parseInt(result.value); if (!isNaN(sst) && sst < @orderProduct.Product?.Quantity) { result.value = sst + 1;} return false;">
+                                            <i class="lnr lnr-chevron-up"></i>
+                                    </button>
+                                    <button type="button" class="reduced items-count"
+                                            onclick="var result = document.getElementById('sst_@orderProduct.Product?.Id'); var sst=parseInt(result.value); if (!isNaN(sst) && sst> 0) { result.value = sst - 1;} return false;">
+                                            <i class="lnr lnr-chevron-down"></i>
+                                    </button>
+                                </div>
+                            </td>
+                            <td>
+                                <h5 id="total_@orderProduct.Product?.Id">Total:...</h5>
+                            </td> *@
+
+                            <td>
+                                <div class="product_count">
+                                    <label for="sst_@orderProduct.Product?.Id">Quantity:</label>
+                                    <input type="hidden" name="productId" value="@orderProduct.Product?.Id" />
+                                    <input type="hidden" name="returnUrl" value="@Context.Request.Path" />
+                                    <input type="number"
+                                           name="quantity"
+                                           id="sst_@orderProduct.Product?.Id"
+                                           maxlength="12"
+                                           value="@orderProduct.Quantity"
+                                           min="1"
+                                           max="@orderProduct.Product?.Quantity"
+                                           title="Quantity:"
+                                           class="input-text qty"
+                                           oninput="let max=@orderProduct.Product?.Quantity;
+                                           if(this.value> max) this.value = max;
+                                    if(this.value < 0) this.value = 0;" />
+                                    <button type="button" class="increase items-count"
+                                            onclick="var result = document.getElementById('sst_@orderProduct.Product?.Id');
+                                            var sst=parseInt(result.value);
+                                            if (!isNaN(sst) && sst < @orderProduct.Product?.Quantity) { result.value = sst + 1;} return false;">
+                                        <i class="lnr lnr-chevron-up"></i>
+                                </button>
+                                    <button type="button" class="reduced items-count"
+                                            onclick="var result = document.getElementById('sst_@orderProduct.Product?.Id');
+                                            var sst=parseInt(result.value);
+                                            if (!isNaN(sst) && sst>
+                                        0) { result.value = sst - 1;} return false;">
+                                        <i class="lnr lnr-chevron-down"></i>
+                                    </button>
+                                </div>
+                            </td>
+                            <td>
+                                <h5 id="total_@orderProduct.Product?.Id">
+                                    Total: @( orderProduct.GetTotal()?.ToString("C", System.Globalization.CultureInfo.CurrentCulture) )
+                                </h5>
+                            </td>
+
+                        </tr>
+                    }
+
+
+                    <tr class="bottom_button">
+                        <td>
+                            <a class="gray_btn" href="#">Update Cart</a>
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            @* <div class="cupon_text">
+                                <input type="text" placeholder="Coupon Code" />
+                                <a class="main_btn" href="#">Apply</a>
+                                <a class="gray_btn" href="#">Close Coupon</a>
+                            </div> *@
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            <h5>Subtotal</h5>
+                        </td>
+                        <td>
+                            <h5>NaN</h5>
+                        </td>
+                    </tr>
+                    <tr class="out_button_area">
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            <div class="checkout_btn_inner">
+                                <a class="gray_btn" href="#">Continue Shopping</a>
+                                <a class="main_btn" href="#">Proceed to checkout</a>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script>
+    function changeQuantity(productId, delta, max, unitPrice) {
+        const input = document.getElementById('sst_' + productId);
+        let value = parseInt(input.value) || 0;
+
+        value += delta;
+        if (value > max) value = max;
+        if (value < 0) value = 0;
+
+        input.value = value;
+        updateTotal(productId, unitPrice);
+    }
+
+    function changeQuantity(productId, max, unitPrice) {
+        const input = document.getElementById('sst_' + productId);
+        let value = parseInt(input.value) || 0;
+
+        if (value > max) value = max;
+        if (value < 0) value = 0;
+
+        input.value = value;
+        updateTotal(productId, unitPrice);
+    }
+
+    function updateTotal(productId, unitPrice) {
+        const quantity = parseInt(document.getElementById('sst_' + productId).value) || 0;
+        const total = unitPrice * quantity;
+        document.getElementById('total_' + productId).innerText = 'Total: ' + total.toLocaleString('en-US', { style: 'currency', currency: 'USD' });
+    }
+</script>
+

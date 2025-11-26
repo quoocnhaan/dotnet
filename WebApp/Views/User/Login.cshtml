@@ -1,0 +1,38 @@
+﻿﻿@{
+    ViewData["Title"] = "Login";
+}
+@model LoginViewModel
+
+<div class="row">
+    <div class="form-container">
+        <section>
+            <form id="account" method="post" asp-router-returnUrl="">
+                <h2>logging in.</h2>
+                <hr />
+                <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
+                <div class="form-floating mb-3">
+                    <label asp-for="@Model.UserName" class="form-label">UserName</label>
+                    <input asp-for="@Model.UserName" class="form-control" autocomplete="username" aria-required="true" placeholder="Username" />
+                    <span asp-validation-for="@Model.UserName" class="text-danger"></span>
+                </div>
+                <div class="form-floating mb-3">
+                    <label asp-for="@Model.Password" class="form-label">Password</label>
+                    <input asp-for="@Model.Password" class="form-control" autocomplete="current-password" aria-required="true" placeholder="password" />
+                    <span asp-validation-for="@Model.Password" class="text-danger"></span>
+                </div>
+                <div>
+                    <button id="login-submit" type="submit" class="w-100 btn btn-lg btn-primary">Log in</button>
+                </div>
+                <div>
+                    <p>
+                        <a asp-action="Register" asp-controller="User" asp-route-returnUrl="">Register as a new user</a>
+                    </p>
+                </div>
+            </form>
+        </section>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

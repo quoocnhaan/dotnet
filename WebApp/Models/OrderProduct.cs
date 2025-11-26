@@ -11,5 +11,11 @@
 
         public int? Quantity { get; set; }
         double? Price { get; set; }
+
+
+        public double? GetTotal()
+        {
+            return Product?.GetPriceAfterDiscount() * Quantity;
+        }
     }
 }
