@@ -82,15 +82,41 @@ namespace WebApp.Controllers
             return Redirect(returnUrl);
         }
 
-        public IActionResult Update(int id, string returnUrl, string queryString)
+        public IActionResult Update(int orderId, List<OrderProductUpdateModel> orderProducts, string returnUrl, string queryString)
         {
-            Order? order = _context.Orders?
+            Order? order = _context.Orders
                 .Include(o => o.OrderProducts)
                 .ThenInclude(op => op.Product)
-                .FirstOrDefault(o => o.Id == id); 
+                .SingleOrDefault(o => o.Id == orderId);
+
             if (order != null)
             {
+                foreach (var orderProductUpdate in orderProducts)
+                {
+                    var oldOrderProduct = order.OrderProducts?.FirstOrDefault(op => op.ProductId == orderProductUpdate.ProductId);
+                    if (oldOrderProduct != null)
+                    {
+                        int oldQuantity = oldOrderProduct.Quantity ?? 0;
+                        int quantityDifference = orderProductUpdate.Quantity - oldQuantity;
 
+                        if (orderProductUpdate.Quantity == 0)
+                        {
+                            _context.OrderProducts.Remove(oldOrderProduct);
+                        } else
+                        {
+                            oldOrderProduct.Quantity = orderProductUpdate.Quantity;
+                            _context.OrderProducts.Update(oldOrderProduct);
+                        }
+
+                        var product = _context.Products.Find(orderProductUpdate.ProductId);
+                        if (product != null)
+                        {
+                            product.Quantity -= quantityDifference;
+                            _context.Products.Update(product);
+                        }
+                    }
+                }
+                _context.SaveChanges();
             }
             return View("Index", order);
         }
