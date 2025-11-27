@@ -10,10 +10,10 @@ namespace WebApp.Models
         public int? CategoryId { get; set; }
         public Category? Category { get; set; }
         public ICollection<OrderProduct>? OrderProducts { get; set; }
-        public required double Price { get; set; }
-        public required int Quantity { get; set; }
-        public required double Discount { get; set; }
-        public required string ImageUrl { get; set; }
+        public double Price { get; set; }
+        public int Quantity { get; set; }
+        public double Discount { get; set; }
+        public string ImageUrl { get; set; }
 
         public double GetPriceAfterDiscount()
         {

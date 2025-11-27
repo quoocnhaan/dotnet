@@ -1,0 +1,65 @@
+﻿@model IEnumerable<Product>
+
+@{
+    ViewData["Title"] = "Products";
+}
+
+<h1>Products</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Create New Product</a>
+</p>
+
+@if (Model != null && Model.Any())
+{
+    <table class="table table-striped table-bordered">
+        <thead class="table-dark">
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Category</th>
+                <th>Price</th>
+                <th>Discount</th>
+                <th>Price After Discount</th>
+                <th>Quantity</th>
+                <th>Image</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var product in Model)
+            {
+                <tr>
+                    <td>@product.Id</td>
+                    <td>@product.Name</td>
+                    <td>@product.Description</td>
+                    <td>@product.Category?.Name</td>
+                    <td>@product.Price.ToString("C")</td>
+                    <td>@(product.Discount * 100)%</td>
+                    <td>@product.GetPriceAfterDiscount().ToString("C")</td>
+                    <td>@product.Quantity</td>
+                    <td>
+                        @if (!string.IsNullOrEmpty(product.ImageUrl))
+                        {
+                            <img src="@Url.Content("~/" + product.ImageUrl)" alt="@product.Name" width="60" />
+                        }
+                    </td>
+                    <td>
+                        <div class="d-flex" style="gap: 10px">
+                            <a asp-action="Edit" asp-route-id="@product.Id" class="btn btn-sm btn-warning">Edit</a>
+                            <a asp-action="Detail" asp-route-id="@product.Id" class="btn btn-sm btn-info">Details</a>
+                            <a asp-action="Delete" asp-route-id="@product.Id" class="btn btn-sm btn-danger">Delete</a>
+                        </div>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <div class="alert alert-info">
+        No products found. <a asp-action="Create">Create a new product</a>.
+    </div>
+}

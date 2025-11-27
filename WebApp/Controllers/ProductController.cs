@@ -13,6 +13,13 @@ namespace WebApp.Controllers
             : base(userManager, context)
         {
         }
+
+        public IActionResult Index()
+        {
+            List<Product> products = _context.Products.Include(p => p.Category).ToList();
+            return View(products);
+        }
+
         public IActionResult Detail(int id)
         {
             var product = _context.Products
@@ -23,6 +30,25 @@ namespace WebApp.Controllers
                 return NotFound();
 
             SetCartProductCount();
+            return View(product);
+        }
+
+        public IActionResult Create()
+        {
+            ViewData["Category"] = _context.Categories.ToList();
+            return View("Upsert", new Product());
+        }
+
+        public IActionResult Edit(int id)
+        {
+            ViewData["Category"] = _context.Categories.ToList();
+            var product = _context.Products.Include(p => p.Category).FirstOrDefault(p => p.Id == id);
+            return View("Upsert", product);
+        }
+
+        public IActionResult Delete(int id)
+        {
+            var product = _context.Products.Find(id);
             return View(product);
         }
 
@@ -37,6 +63,36 @@ namespace WebApp.Controllers
                     .Sum(op => op.Quantity);
                 TempData["CartProductCount"] = cartProductCount;
             }
+        }
+
+        [HttpPost]
+        public IActionResult Upsert(Product model)
+        {
+            if (!ModelState.IsValid)
+                return View(model);
+
+            if (model.Id == 0)
+            {
+                _context.Products.Add(model);
+            }
+            else
+            {
+                _context.Products.Update(model);
+            }
+
+            _context.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
+        [HttpPost]
+        public IActionResult DeleteConfirmed(int id)
+        {
+            var product = _context.Products.Find(id);
+            if (product == null) return NotFound();
+
+            _context.Products.Remove(product);
+            _context.SaveChanges();
+            return RedirectToAction("Index");
         }
     }
 }

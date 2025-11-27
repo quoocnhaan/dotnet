@@ -81,7 +81,7 @@
                             <div class="col-lg-7 pr-0">
                                 <ul class="nav navbar-nav center_nav pull-right">
                                     <li class="nav-item">
-                                        <a class="nav-link" href="index.html">Home</a>
+                                        <a class="nav-link" href="~/">Home</a>
                                     </li>
                                     <li class="nav-item active submenu dropdown">
                                         <a href="#"
@@ -140,6 +140,9 @@
                                     <li class="nav-item">
                                         <a class="nav-link" href="contact.html">Contact</a>
                                     </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" asp-controller="Product" asp-action="Index">Product</a>
+                                    </li>
                                 </ul>
                             </div>
 
@@ -183,9 +186,10 @@
                 <div class="col-lg-3">
                     <div class="left_sidebar_area">
                         <aside class="left_widgets p_filter_widgets">
-                            <div class="l_w_title">
-                                <h3>Browse Categories</h3>
-                            </div>
+                            <a asp-controller="Category" asp-action="Index">
+                                <h3 class="btn btn-primary w-100 text-center m-0 mb-4">Categories</h3>
+                            </a>
+
                             <div class="widgets_inner">
                                 @await Component.InvokeAsync("Category")
                             </div>

@@ -16,7 +16,6 @@ namespace WebApp.Models
     public double GetTotal()
         {
             return OrderProducts?.Sum(op => op.GetTotal()) ?? 0;
-
         }
     }
 }
