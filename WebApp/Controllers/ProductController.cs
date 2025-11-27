@@ -17,6 +17,7 @@ namespace WebApp.Controllers
         public IActionResult Index()
         {
             List<Product> products = _context.Products.Include(p => p.Category).ToList();
+            SetCartProductCount();
             return View(products);
         }
 
@@ -36,6 +37,8 @@ namespace WebApp.Controllers
         public IActionResult Create()
         {
             ViewData["Category"] = _context.Categories.ToList();
+            SetCartProductCount();
+
             return View("Upsert", new Product());
         }
 
@@ -43,26 +46,15 @@ namespace WebApp.Controllers
         {
             ViewData["Category"] = _context.Categories.ToList();
             var product = _context.Products.Include(p => p.Category).FirstOrDefault(p => p.Id == id);
+            SetCartProductCount();
             return View("Upsert", product);
         }
 
         public IActionResult Delete(int id)
         {
             var product = _context.Products.Find(id);
+            SetCartProductCount();
             return View(product);
-        }
-
-        private void SetCartProductCount()
-        {
-            var currentUser = _userManager.GetUserAsync(User).Result;
-            if (currentUser != null)
-            {
-                int? cartProductCount = _context.Orders
-                    .Where(o => o.UserId == currentUser.Id)
-                    .SelectMany(o => o.OrderProducts)
-                    .Sum(op => op.Quantity);
-                TempData["CartProductCount"] = cartProductCount;
-            }
         }
 
         [HttpPost]

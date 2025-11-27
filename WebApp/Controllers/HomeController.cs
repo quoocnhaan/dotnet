@@ -24,7 +24,6 @@ namespace WebApp.Controllers
         {           
             List<Product> products = _context.Products.ToList();
             SetCartProductCount();
-
             return View(products);
         }
 

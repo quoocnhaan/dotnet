@@ -99,15 +99,11 @@
                                    if(this.value> max) this.value = max;
                                    if(this.value < 1) this.value = 1;" />
                             <button type="button" class="increase items-count"
-                                    onclick="var result = document.getElementById('sst');
-                                    var sst=parseInt(result.value);
-                                    if (!isNaN(sst) && sst < @Model.Quantity) { result.value = sst + 1;} return false;">
+                                    onclick="var result = document.getElementById('sst'); var sst=parseInt(result.value); if (!isNaN(sst) && sst < @Model.Quantity) { result.value = sst + 1;} return false;">
                                     <i class="lnr lnr-chevron-up"></i>
                             </button>
                             <button type="button" class="reduced items-count"
-                                    onclick="var result = document.getElementById('sst');
-                                    var sst=parseInt(result.value);
-                                    if (!isNaN(sst) && sst > 1) { result.value = sst - 1;} return false;">
+                                    onclick="var result = document.getElementById('sst'); var sst=parseInt(result.value); if (!isNaN(sst) && sst > 1) { result.value = sst - 1;} return false;">
                                     <i class="lnr lnr-chevron-down"></i>
                             </button>
                         </div>

@@ -22,6 +22,7 @@ namespace WebApp.Controllers
                 .Include(o => o.OrderProducts)
                 .ThenInclude(op => op.Product)
                 .FirstOrDefault(o => o.UserId == id);
+            SetCartProductCount();
             return View(order);
         }
 
@@ -118,6 +119,7 @@ namespace WebApp.Controllers
                 }
                 _context.SaveChanges();
             }
+            SetCartProductCount();
             return View("Index", order);
         }
     }

@@ -17,10 +17,10 @@
         <dd class="col-sm-9">@Model.Description</dd>
 
         <dt class="col-sm-3">Price</dt>
-        <dd class="col-sm-9">@Model.Price.ToString("C")</dd>
+        <dd class="col-sm-9">@Model.GetPriceAfterDiscount().ToString("C", System.Globalization.CultureInfo.CurrentCulture)</dd>
 
         <dt class="col-sm-3">Discount</dt>
-        <dd class="col-sm-9">@(Model.Discount * 100) %</dd>
+        <dd class="col-sm-9">@(Model.Discount * 100)%</dd>
 
         <dt class="col-sm-3">Quantity</dt>
         <dd class="col-sm-9">@Model.Quantity</dd>

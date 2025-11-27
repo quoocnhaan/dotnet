@@ -2,77 +2,88 @@
 ============================================================================================ */
 
 .single-product {
-  text-align: center;
-  margin-bottom: 50px;
-  .product-img {
-    position: relative;
-    overflow: hidden;
-    .p_icon {
-      width: 90%;
-      padding: 7px 30px;
-      position: absolute;
-      bottom: -100px;
-      left: 50%;
-      @include transform(translateX(-50%));
-      background: rgba($primary-color, 0.4);
-      transition: all 400ms ease;
-      a {
-        display: inline-block;
-        height: 36px;
-        line-height: 40px;
-        width: 36px;
-        text-align: center;
-        background: #fff;
-        border-radius: 30px;
-        color: $title-color;
-        margin-right: 25px;
-        &:last-child {
-          margin-right: 0px;
-        }
-        &:hover {
-          color: #fff;
-          background: $primary-color;
-        }
-      }
-    }
-  }
-  .product-btm {
-    padding: 22px 25px 18px;
-    border: 1px solid #f0f2f1;
-    text-align: left;
-    h4 {
-      color: #4a4a4a;
-      font-size: 14px;
-      font-weight: 400;
-      text-transform: uppercase;
-      margin-bottom: 0px;
-      @include transition;
-    }
-    h5 {
-      margin-bottom: 0px;
-      font-size: 18px;
-      color: $text-color;
-    }
-    span {
-      font-family: $title-font;
-      font-size: 20px;
-      font-weight: 500;
-      line-height: 16px;
-      color: $title-color;
-    }
-  }
-  &:hover {
+    text-align: center;
+    margin-bottom: 50px;
+
     .product-img {
-      .p_icon {
-        bottom: 0px;
-      }
+        position: relative;
+        overflow: hidden;
+
+        .p_icon {
+            width: 90%;
+            padding: 7px 30px;
+            position: absolute;
+            bottom: -100px;
+            left: 50%;
+            @include transform(translateX(-50%));
+            background: rgba($primary-color, 0.4);
+            transition: all 400ms ease;
+
+            a {
+                display: inline-block;
+                height: 36px;
+                line-height: 40px;
+                width: 36px;
+                text-align: center;
+                background: #fff;
+                border-radius: 30px;
+                color: $title-color;
+                margin-right: 25px;
+
+                &:last-child {
+                    margin-right: 0px;
+                }
+
+                &:hover {
+                    color: #fff;
+                    background: $primary-color;
+                }
+            }
+        }
     }
+
     .product-btm {
-      h4 {
-        color: $primary-color;
-      }
+        padding: 22px 25px 18px;
+        border: 1px solid #f0f2f1;
+        text-align: left;
+
+        h4 {
+            color: #4a4a4a;
+            font-size: 14px;
+            font-weight: 400;
+            text-transform: uppercase;
+            margin-bottom: 0px;
+            @include transition;
+        }
+
+        h5 {
+            margin-bottom: 0px;
+            font-size: 18px;
+            color: $text-color;
+        }
+
+        span {
+            font-family: $title-font;
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 16px;
+            color: $title-color;
+        }
     }
-  }
+
+    &:hover {
+        .product-img {
+            .p_icon {
+                bottom: 0px;
+            }
+        }
+
+        .product-btm {
+            h4 {
+                color: $primary-color;
+            }
+        }
+    }
 }
 
 .latest_product_inner {

@@ -15,23 +15,29 @@ namespace WebApp.Controllers
         public IActionResult Index()
         {
             List<Category> categories = _context.Categories.Include(c => c.Products).ToList();
+            SetCartProductCount();
+
             return View(categories);
         }
 
         public IActionResult Create()
         {
+            SetCartProductCount();
+
             return View("Upsert", new Category());
         }
 
         public IActionResult Edit(int id)
         {
             var category = _context.Categories.FirstOrDefault(c => c.Id == id);
+            SetCartProductCount();
             return View("Upsert", category);
         }
 
         public IActionResult Delete(int id)
         {
             var category = _context.Categories.FirstOrDefault(c => c.Id == id);
+            SetCartProductCount();
             return View(category);
         }
 
