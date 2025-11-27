@@ -20,7 +20,7 @@
         <dd class="col-sm-9">@Model.Price.ToString("C")</dd>
 
         <dt class="col-sm-3">Discount</dt>
-        <dd class="col-sm-9">@Model.Discount * 100 %</dd>
+        <dd class="col-sm-9">@(Model.Discount * 100) %</dd>
 
         <dt class="col-sm-3">Quantity</dt>
         <dd class="col-sm-9">@Model.Quantity</dd>
@@ -29,7 +29,7 @@
         <dd class="col-sm-9">
             @if (!string.IsNullOrEmpty(Model.ImageUrl))
             {
-                <img src="@Model.ImageUrl" alt="@Model.Name" width="100" />
+                <img src="@Url.Content("~/" + Model.ImageUrl)" alt="@Model.Name" width="100" />
             }
         </dd>
     </dl>
