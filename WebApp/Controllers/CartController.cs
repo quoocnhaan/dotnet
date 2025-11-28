@@ -10,20 +10,21 @@ namespace WebApp.Controllers
 {
     public class CartController : BaseController
     {
-
-
         public CartController(UserManager<AppUser> userManager, AppDBContext context)
             : base(userManager, context)
         {
         }
-        public IActionResult Index(string id)
+        public IActionResult Index()
         {
-            Order? order = _context.Orders?
+            string userId = _userManager.GetUserAsync(User).Result?.Id;
+            List<Order> orders = _context.Orders
                 .Include(o => o.OrderProducts)
-                .ThenInclude(op => op.Product)
-                .FirstOrDefault(o => o.UserId == id);
+                    .ThenInclude(op => op.Product)
+                .Where(o => o.UserId == userId)
+                .ToList();
+
             SetCartProductCount();
-            return View(order);
+            return View(orders);
         }
 
         public IActionResult Add(int productId, string returnUrl, string queryString, int quantity = 1)
@@ -83,18 +84,12 @@ namespace WebApp.Controllers
             return Redirect(returnUrl);
         }
 
-        public IActionResult Update(int orderId, List<OrderProductUpdateModel> orderProducts, string returnUrl, string queryString)
+        public IActionResult Update(List<OrderProductUpdateModel> orderProducts, string returnUrl, string queryString)
         {
-            Order? order = _context.Orders
-                .Include(o => o.OrderProducts)
-                .ThenInclude(op => op.Product)
-                .SingleOrDefault(o => o.Id == orderId);
 
-            if (order != null)
-            {
                 foreach (var orderProductUpdate in orderProducts)
                 {
-                    var oldOrderProduct = order.OrderProducts?.FirstOrDefault(op => op.ProductId == orderProductUpdate.ProductId);
+                    var oldOrderProduct = _context.OrderProducts?.FirstOrDefault(op => op.Id == orderProductUpdate.Id);
                     if (oldOrderProduct != null)
                     {
                         int oldQuantity = oldOrderProduct.Quantity ?? 0;
@@ -109,18 +104,18 @@ namespace WebApp.Controllers
                             _context.OrderProducts.Update(oldOrderProduct);
                         }
 
-                        var product = _context.Products.Find(orderProductUpdate.ProductId);
-                        if (product != null)
-                        {
-                            product.Quantity -= quantityDifference;
-                            _context.Products.Update(product);
-                        }
-                    }
+                        //var product = _context.Products.Find(orderProductUpdate.ProductId);
+                        //if (product != null)
+                        //{
+                        //    product.Quantity -= quantityDifference;
+                        //    _context.Products.Update(product);
+                        //}
+                    
                 }
                 _context.SaveChanges();
             }
             SetCartProductCount();
-            return View("Index", order);
+            return RedirectToAction("Index");
         }
     }
 }

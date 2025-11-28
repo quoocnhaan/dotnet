@@ -1,177 +1,193 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\PC\\Desktop\\.net\\WebApp\\",
+  "WorkspaceRootPath": "C:\\Users\\LENOVO\\Desktop\\web\\.net\\dotnet\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|c:\\users\\pc\\desktop\\.net\\webapp\\webapp\\views\\category\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|solutionrelative:webapp\\views\\category\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|c:\\users\\pc\\desktop\\.net\\webapp\\webapp\\views\\category\\upsert.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|solutionrelative:webapp\\views\\category\\upsert.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|c:\\users\\pc\\desktop\\.net\\webapp\\webapp\\views\\product\\upsert.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|solutionrelative:webapp\\views\\product\\upsert.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|c:\\users\\pc\\desktop\\.net\\webapp\\webapp\\views\\product\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|solutionrelative:webapp\\views\\product\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|c:\\users\\pc\\desktop\\.net\\webapp\\webapp\\views\\product\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|solutionrelative:webapp\\views\\product\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|c:\\users\\pc\\desktop\\.net\\webapp\\webapp\\views\\product\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|solutionrelative:webapp\\views\\product\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|c:\\users\\pc\\desktop\\.net\\webapp\\webapp\\views\\cart\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|solutionrelative:webapp\\views\\cart\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|c:\\users\\pc\\desktop\\.net\\webapp\\webapp\\views\\shared\\_product.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|solutionrelative:webapp\\views\\shared\\_product.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|c:\\users\\pc\\desktop\\.net\\webapp\\webapp\\views\\category\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|solutionrelative:webapp\\views\\category\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|c:\\users\\pc\\desktop\\.net\\webapp\\webapp\\models\\registerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|solutionrelative:webapp\\models\\registerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|c:\\users\\pc\\desktop\\.net\\webapp\\webapp\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|solutionrelative:webapp\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|c:\\users\\pc\\desktop\\.net\\webapp\\webapp\\models\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|solutionrelative:webapp\\models\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|c:\\users\\pc\\desktop\\.net\\webapp\\webapp\\models\\orderproductupdatemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|solutionrelative:webapp\\models\\orderproductupdatemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|c:\\users\\pc\\desktop\\.net\\webapp\\webapp\\models\\orderproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|solutionrelative:webapp\\models\\orderproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|c:\\users\\pc\\desktop\\.net\\webapp\\webapp\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|solutionrelative:webapp\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|c:\\users\\pc\\desktop\\.net\\webapp\\webapp\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|solutionrelative:webapp\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|c:\\users\\pc\\desktop\\.net\\webapp\\webapp\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|solutionrelative:webapp\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|c:\\users\\pc\\desktop\\.net\\webapp\\webapp\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|c:\\users\\lenovo\\desktop\\web\\.net\\dotnet\\webapp\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|solutionrelative:webapp\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|c:\\users\\pc\\desktop\\.net\\webapp\\webapp\\controllers\\basecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|solutionrelative:webapp\\controllers\\basecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|c:\\users\\lenovo\\desktop\\web\\.net\\dotnet\\webapp\\views\\cart\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|solutionrelative:webapp\\views\\cart\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|c:\\users\\pc\\desktop\\.net\\webapp\\webapp\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|solutionrelative:webapp\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|c:\\users\\lenovo\\desktop\\web\\.net\\dotnet\\webapp\\models\\orderproductupdatemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|solutionrelative:webapp\\models\\orderproductupdatemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|c:\\users\\pc\\desktop\\.net\\webapp\\webapp\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|solutionrelative:webapp\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|c:\\users\\lenovo\\desktop\\web\\.net\\dotnet\\webapp\\models\\orderproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|solutionrelative:webapp\\models\\orderproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|c:\\users\\pc\\desktop\\.net\\webapp\\webapp\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|solutionrelative:webapp\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|c:\\users\\pc\\desktop\\.net\\webapp\\webapp\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|solutionrelative:webapp\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|c:\\users\\pc\\desktop\\.net\\webapp\\webapp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|solutionrelative:webapp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|c:\\users\\pc\\desktop\\.net\\webapp\\webapp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|solutionrelative:webapp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|c:\\users\\pc\\desktop\\.net\\webapp\\webapp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|solutionrelative:webapp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|c:\\users\\pc\\desktop\\.net\\webapp\\webapp\\wwwroot\\css\\bootstrap.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|solutionrelative:webapp\\wwwroot\\css\\bootstrap.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|c:\\users\\pc\\desktop\\.net\\webapp\\webapp\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|c:\\users\\lenovo\\desktop\\web\\.net\\dotnet\\webapp\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|solutionrelative:webapp\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|c:\\users\\pc\\desktop\\.net\\webapp\\webapp\\wwwroot\\css\\flaticon.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "AbsoluteMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|c:\\users\\lenovo\\desktop\\web\\.net\\dotnet\\webapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|solutionrelative:webapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\LENOVO\\Desktop\\web\\.net\\dotnet\\WebApp\\Migrations\\20251128072305_createdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:WebApp\\Migrations\\20251128072305_createdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|c:\\users\\lenovo\\desktop\\web\\.net\\dotnet\\webapp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|solutionrelative:webapp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\LENOVO\\Desktop\\web\\.net\\dotnet\\WebApp\\Migrations\\20251128072053_DBFirst.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:WebApp\\Migrations\\20251128072053_DBFirst.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|c:\\users\\lenovo\\desktop\\web\\.net\\dotnet\\webapp\\views\\category\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|solutionrelative:webapp\\views\\category\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|c:\\users\\lenovo\\desktop\\web\\.net\\dotnet\\webapp\\views\\category\\upsert.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|solutionrelative:webapp\\views\\category\\upsert.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|c:\\users\\lenovo\\desktop\\web\\.net\\dotnet\\webapp\\views\\product\\upsert.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|solutionrelative:webapp\\views\\product\\upsert.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|c:\\users\\lenovo\\desktop\\web\\.net\\dotnet\\webapp\\views\\product\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|solutionrelative:webapp\\views\\product\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|c:\\users\\lenovo\\desktop\\web\\.net\\dotnet\\webapp\\views\\product\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|solutionrelative:webapp\\views\\product\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|c:\\users\\lenovo\\desktop\\web\\.net\\dotnet\\webapp\\views\\product\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|solutionrelative:webapp\\views\\product\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|c:\\users\\lenovo\\desktop\\web\\.net\\dotnet\\webapp\\views\\shared\\_product.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|solutionrelative:webapp\\views\\shared\\_product.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|c:\\users\\lenovo\\desktop\\web\\.net\\dotnet\\webapp\\views\\category\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|solutionrelative:webapp\\views\\category\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|c:\\users\\lenovo\\desktop\\web\\.net\\dotnet\\webapp\\models\\registerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|solutionrelative:webapp\\models\\registerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|c:\\users\\lenovo\\desktop\\web\\.net\\dotnet\\webapp\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|solutionrelative:webapp\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|c:\\users\\lenovo\\desktop\\web\\.net\\dotnet\\webapp\\models\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|solutionrelative:webapp\\models\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|c:\\users\\lenovo\\desktop\\web\\.net\\dotnet\\webapp\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|solutionrelative:webapp\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|c:\\users\\lenovo\\desktop\\web\\.net\\dotnet\\webapp\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|solutionrelative:webapp\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|c:\\users\\lenovo\\desktop\\web\\.net\\dotnet\\webapp\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|solutionrelative:webapp\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|c:\\users\\lenovo\\desktop\\web\\.net\\dotnet\\webapp\\controllers\\basecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|solutionrelative:webapp\\controllers\\basecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|c:\\users\\lenovo\\desktop\\web\\.net\\dotnet\\webapp\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|solutionrelative:webapp\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|c:\\users\\lenovo\\desktop\\web\\.net\\dotnet\\webapp\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|solutionrelative:webapp\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|c:\\users\\lenovo\\desktop\\web\\.net\\dotnet\\webapp\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|solutionrelative:webapp\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|c:\\users\\lenovo\\desktop\\web\\.net\\dotnet\\webapp\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|solutionrelative:webapp\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|c:\\users\\lenovo\\desktop\\web\\.net\\dotnet\\webapp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|solutionrelative:webapp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|c:\\users\\lenovo\\desktop\\web\\.net\\dotnet\\webapp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|solutionrelative:webapp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|c:\\users\\lenovo\\desktop\\web\\.net\\dotnet\\webapp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|solutionrelative:webapp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|c:\\users\\lenovo\\desktop\\web\\.net\\dotnet\\webapp\\wwwroot\\css\\bootstrap.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|solutionrelative:webapp\\wwwroot\\css\\bootstrap.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|c:\\users\\lenovo\\desktop\\web\\.net\\dotnet\\webapp\\wwwroot\\css\\flaticon.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|solutionrelative:webapp\\wwwroot\\css\\flaticon.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|c:\\users\\pc\\desktop\\.net\\webapp\\webapp\\wwwroot\\scss\\_product.scss||{181FE41B-5A5D-479F-9F8F-BF665F4EBC2A}",
+      "AbsoluteMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|c:\\users\\lenovo\\desktop\\web\\.net\\dotnet\\webapp\\wwwroot\\scss\\_product.scss||{181FE41B-5A5D-479F-9F8F-BF665F4EBC2A}",
       "RelativeMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|solutionrelative:webapp\\wwwroot\\scss\\_product.scss||{181FE41B-5A5D-479F-9F8F-BF665F4EBC2A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|c:\\users\\pc\\desktop\\.net\\webapp\\webapp\\wwwroot\\css\\style.map||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|c:\\users\\lenovo\\desktop\\web\\.net\\dotnet\\webapp\\wwwroot\\css\\style.map||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|solutionrelative:webapp\\wwwroot\\css\\style.map||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|c:\\users\\pc\\desktop\\.net\\webapp\\webapp\\wwwroot\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "AbsoluteMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|c:\\users\\lenovo\\desktop\\web\\.net\\dotnet\\webapp\\wwwroot\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|solutionrelative:webapp\\wwwroot\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|c:\\users\\pc\\desktop\\.net\\webapp\\webapp\\wwwroot\\css\\themify-icons.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "AbsoluteMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|c:\\users\\lenovo\\desktop\\web\\.net\\dotnet\\webapp\\wwwroot\\css\\themify-icons.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|solutionrelative:webapp\\wwwroot\\css\\themify-icons.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|c:\\users\\pc\\desktop\\.net\\webapp\\webapp\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "AbsoluteMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|c:\\users\\lenovo\\desktop\\web\\.net\\dotnet\\webapp\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|solutionrelative:webapp\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|c:\\users\\pc\\desktop\\.net\\webapp\\webapp\\wwwroot\\css\\responsive.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "AbsoluteMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|c:\\users\\lenovo\\desktop\\web\\.net\\dotnet\\webapp\\wwwroot\\css\\responsive.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|solutionrelative:webapp\\wwwroot\\css\\responsive.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|c:\\users\\pc\\desktop\\.net\\webapp\\webapp\\wwwroot\\css\\font-awesome.min.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "AbsoluteMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|c:\\users\\lenovo\\desktop\\web\\.net\\dotnet\\webapp\\wwwroot\\css\\font-awesome.min.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|solutionrelative:webapp\\wwwroot\\css\\font-awesome.min.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|c:\\users\\pc\\desktop\\.net\\webapp\\webapp\\data\\appuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|c:\\users\\lenovo\\desktop\\web\\.net\\dotnet\\webapp\\data\\appuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|solutionrelative:webapp\\data\\appuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|c:\\users\\pc\\desktop\\.net\\webapp\\webapp\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|c:\\users\\lenovo\\desktop\\web\\.net\\dotnet\\webapp\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|solutionrelative:webapp\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|c:\\users\\pc\\desktop\\.net\\webapp\\webapp\\views\\user\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|c:\\users\\lenovo\\desktop\\web\\.net\\dotnet\\webapp\\views\\user\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|solutionrelative:webapp\\views\\user\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|c:\\users\\pc\\desktop\\.net\\webapp\\webapp\\views\\user\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|c:\\users\\lenovo\\desktop\\web\\.net\\dotnet\\webapp\\views\\user\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|solutionrelative:webapp\\views\\user\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|c:\\users\\pc\\desktop\\.net\\webapp\\webapp\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|c:\\users\\lenovo\\desktop\\web\\.net\\dotnet\\webapp\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|solutionrelative:webapp\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|c:\\users\\pc\\desktop\\.net\\webapp\\webapp\\views\\shared\\components\\category\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|c:\\users\\lenovo\\desktop\\web\\.net\\dotnet\\webapp\\views\\shared\\components\\category\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|solutionrelative:webapp\\views\\shared\\components\\category\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|c:\\users\\pc\\desktop\\.net\\webapp\\webapp\\views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|c:\\users\\lenovo\\desktop\\web\\.net\\dotnet\\webapp\\views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{D37FBB3F-608E-4E61-889E-9DF1F2E6BCFB}|WebApp\\WebApp.csproj|solutionrelative:webapp\\views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
@@ -182,63 +198,132 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "CartController.cs",
-              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\.net\\WebApp\\WebApp\\Controllers\\CartController.cs",
-              "RelativeDocumentMoniker": "WebApp\\Controllers\\CartController.cs",
-              "ToolTip": "C:\\Users\\PC\\Desktop\\.net\\WebApp\\WebApp\\Controllers\\CartController.cs",
-              "RelativeToolTip": "WebApp\\Controllers\\CartController.cs",
-              "ViewState": "AgIAAFYAAAAAAAAAAAAIwHoAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-26T14:43:17.746Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "bootstrap-grid.css.map",
-              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\.net\\WebApp\\WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
-              "RelativeDocumentMoniker": "WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
-              "ToolTip": "C:\\Users\\PC\\Desktop\\.net\\WebApp\\WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
-              "RelativeToolTip": "WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAACnogIAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-11-27T15:26:20.355Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 3,
               "Title": "OrderProduct.cs",
-              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\.net\\WebApp\\WebApp\\Models\\OrderProduct.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\web\\.net\\dotnet\\WebApp\\Models\\OrderProduct.cs",
               "RelativeDocumentMoniker": "WebApp\\Models\\OrderProduct.cs",
-              "ToolTip": "C:\\Users\\PC\\Desktop\\.net\\WebApp\\WebApp\\Models\\OrderProduct.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\web\\.net\\dotnet\\WebApp\\Models\\OrderProduct.cs",
               "RelativeToolTip": "WebApp\\Models\\OrderProduct.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-26T18:21:18.807Z"
+              "WhenOpened": "2025-11-26T18:21:18.807Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "OrderProductUpdateModel.cs",
-              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\.net\\WebApp\\WebApp\\Models\\OrderProductUpdateModel.cs",
-              "RelativeDocumentMoniker": "WebApp\\Models\\OrderProductUpdateModel.cs",
-              "ToolTip": "C:\\Users\\PC\\Desktop\\.net\\WebApp\\WebApp\\Models\\OrderProductUpdateModel.cs",
-              "RelativeToolTip": "WebApp\\Models\\OrderProductUpdateModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "CartController.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\web\\.net\\dotnet\\WebApp\\Controllers\\CartController.cs",
+              "RelativeDocumentMoniker": "WebApp\\Controllers\\CartController.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\web\\.net\\dotnet\\WebApp\\Controllers\\CartController.cs",
+              "RelativeToolTip": "WebApp\\Controllers\\CartController.cs",
+              "ViewState": "AgIAAEQAAAAAAAAAAAAgwFgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-27T08:59:55.365Z"
+              "WhenOpened": "2025-11-26T14:43:17.746Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\web\\.net\\dotnet\\WebApp\\Views\\Cart\\Index.cshtml",
+              "RelativeDocumentMoniker": "WebApp\\Views\\Cart\\Index.cshtml",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\web\\.net\\dotnet\\WebApp\\Views\\Cart\\Index.cshtml*",
+              "RelativeToolTip": "WebApp\\Views\\Cart\\Index.cshtml*",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAACUAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-26T17:18:41.999Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Order.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\web\\.net\\dotnet\\WebApp\\Models\\Order.cs",
+              "RelativeDocumentMoniker": "WebApp\\Models\\Order.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\web\\.net\\dotnet\\WebApp\\Models\\Order.cs",
+              "RelativeToolTip": "WebApp\\Models\\Order.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-26T18:20:45.155Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "OrderProductUpdateModel.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\web\\.net\\dotnet\\WebApp\\Models\\OrderProductUpdateModel.cs",
+              "RelativeDocumentMoniker": "WebApp\\Models\\OrderProductUpdateModel.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\web\\.net\\dotnet\\WebApp\\Models\\OrderProductUpdateModel.cs",
+              "RelativeToolTip": "WebApp\\Models\\OrderProductUpdateModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-27T08:59:55.365Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\web\\.net\\dotnet\\WebApp\\Program.cs",
+              "RelativeDocumentMoniker": "WebApp\\Program.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\web\\.net\\dotnet\\WebApp\\Program.cs",
+              "RelativeToolTip": "WebApp\\Program.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAApwDQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-28T07:17:33.691Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\web\\.net\\dotnet\\WebApp\\appsettings.json",
+              "RelativeDocumentMoniker": "WebApp\\appsettings.json",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\web\\.net\\dotnet\\WebApp\\appsettings.json",
+              "RelativeToolTip": "WebApp\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-28T07:17:41.486Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "20251128072053_DBFirst.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\web\\.net\\dotnet\\WebApp\\Migrations\\20251128072053_DBFirst.cs",
+              "RelativeDocumentMoniker": "WebApp\\Migrations\\20251128072053_DBFirst.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\web\\.net\\dotnet\\WebApp\\Migrations\\20251128072053_DBFirst.cs",
+              "RelativeToolTip": "WebApp\\Migrations\\20251128072053_DBFirst.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-28T07:20:53.218Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "20251128072305_createdb.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\web\\.net\\dotnet\\WebApp\\Migrations\\20251128072305_createdb.cs",
+              "RelativeDocumentMoniker": "WebApp\\Migrations\\20251128072305_createdb.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\web\\.net\\dotnet\\WebApp\\Migrations\\20251128072305_createdb.cs",
+              "RelativeToolTip": "WebApp\\Migrations\\20251128072305_createdb.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-28T07:23:05.591Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
               "Title": "Product.cs",
-              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\.net\\WebApp\\WebApp\\Models\\Product.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\web\\.net\\dotnet\\WebApp\\Models\\Product.cs",
               "RelativeDocumentMoniker": "WebApp\\Models\\Product.cs",
-              "ToolTip": "C:\\Users\\PC\\Desktop\\.net\\WebApp\\WebApp\\Models\\Product.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\web\\.net\\dotnet\\WebApp\\Models\\Product.cs",
               "RelativeToolTip": "WebApp\\Models\\Product.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -246,11 +331,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 19,
               "Title": "LoginViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\.net\\WebApp\\WebApp\\Models\\LoginViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\web\\.net\\dotnet\\WebApp\\Models\\LoginViewModel.cs",
               "RelativeDocumentMoniker": "WebApp\\Models\\LoginViewModel.cs",
-              "ToolTip": "C:\\Users\\PC\\Desktop\\.net\\WebApp\\WebApp\\Models\\LoginViewModel.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\web\\.net\\dotnet\\WebApp\\Models\\LoginViewModel.cs",
               "RelativeToolTip": "WebApp\\Models\\LoginViewModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -259,10 +344,35 @@
             {
               "$type": "Document",
               "DocumentIndex": 9,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\web\\.net\\dotnet\\WebApp\\Views\\Category\\Index.cshtml",
+              "RelativeDocumentMoniker": "WebApp\\Views\\Category\\Index.cshtml",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\web\\.net\\dotnet\\WebApp\\Views\\Category\\Index.cshtml",
+              "RelativeToolTip": "WebApp\\Views\\Category\\Index.cshtml",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAABIAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-27T09:58:51.237Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "bootstrap-grid.css.map",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\web\\.net\\dotnet\\WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+              "RelativeDocumentMoniker": "WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\web\\.net\\dotnet\\WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+              "RelativeToolTip": "WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAACnogIAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-11-27T15:26:20.355Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
               "Title": "RegisterViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\.net\\WebApp\\WebApp\\Models\\RegisterViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\web\\.net\\dotnet\\WebApp\\Models\\RegisterViewModel.cs",
               "RelativeDocumentMoniker": "WebApp\\Models\\RegisterViewModel.cs",
-              "ToolTip": "C:\\Users\\PC\\Desktop\\.net\\WebApp\\WebApp\\Models\\RegisterViewModel.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\web\\.net\\dotnet\\WebApp\\Models\\RegisterViewModel.cs",
               "RelativeToolTip": "WebApp\\Models\\RegisterViewModel.cs",
               "ViewState": "AgIAAAUAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -270,11 +380,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 16,
               "Title": "Delete.cshtml",
-              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\.net\\WebApp\\WebApp\\Views\\Category\\Delete.cshtml",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\web\\.net\\dotnet\\WebApp\\Views\\Category\\Delete.cshtml",
               "RelativeDocumentMoniker": "WebApp\\Views\\Category\\Delete.cshtml",
-              "ToolTip": "C:\\Users\\PC\\Desktop\\.net\\WebApp\\WebApp\\Views\\Category\\Delete.cshtml",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\web\\.net\\dotnet\\WebApp\\Views\\Category\\Delete.cshtml",
               "RelativeToolTip": "WebApp\\Views\\Category\\Delete.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -282,24 +392,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\.net\\WebApp\\WebApp\\Views\\Category\\Index.cshtml",
-              "RelativeDocumentMoniker": "WebApp\\Views\\Category\\Index.cshtml",
-              "ToolTip": "C:\\Users\\PC\\Desktop\\.net\\WebApp\\WebApp\\Views\\Category\\Index.cshtml",
-              "RelativeToolTip": "WebApp\\Views\\Category\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-27T09:58:51.237Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 10,
               "Title": "Upsert.cshtml",
-              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\.net\\WebApp\\WebApp\\Views\\Category\\Upsert.cshtml",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\web\\.net\\dotnet\\WebApp\\Views\\Category\\Upsert.cshtml",
               "RelativeDocumentMoniker": "WebApp\\Views\\Category\\Upsert.cshtml",
-              "ToolTip": "C:\\Users\\PC\\Desktop\\.net\\WebApp\\WebApp\\Views\\Category\\Upsert.cshtml",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\web\\.net\\dotnet\\WebApp\\Views\\Category\\Upsert.cshtml",
               "RelativeToolTip": "WebApp\\Views\\Category\\Upsert.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAABQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -307,11 +404,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 14,
               "Title": "Delete.cshtml",
-              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\.net\\WebApp\\WebApp\\Views\\Product\\Delete.cshtml",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\web\\.net\\dotnet\\WebApp\\Views\\Product\\Delete.cshtml",
               "RelativeDocumentMoniker": "WebApp\\Views\\Product\\Delete.cshtml",
-              "ToolTip": "C:\\Users\\PC\\Desktop\\.net\\WebApp\\WebApp\\Views\\Product\\Delete.cshtml",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\web\\.net\\dotnet\\WebApp\\Views\\Product\\Delete.cshtml",
               "RelativeToolTip": "WebApp\\Views\\Product\\Delete.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -319,11 +416,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 13,
               "Title": "Detail.cshtml",
-              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\.net\\WebApp\\WebApp\\Views\\Product\\Detail.cshtml",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\web\\.net\\dotnet\\WebApp\\Views\\Product\\Detail.cshtml",
               "RelativeDocumentMoniker": "WebApp\\Views\\Product\\Detail.cshtml",
-              "ToolTip": "C:\\Users\\PC\\Desktop\\.net\\WebApp\\WebApp\\Views\\Product\\Detail.cshtml",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\web\\.net\\dotnet\\WebApp\\Views\\Product\\Detail.cshtml",
               "RelativeToolTip": "WebApp\\Views\\Product\\Detail.cshtml",
               "ViewState": "AgIAAF0AAAAAAAAAAAAAAHAAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -331,11 +428,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 15,
               "Title": "_Product.cshtml",
-              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\.net\\WebApp\\WebApp\\Views\\Shared\\_Product.cshtml",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\web\\.net\\dotnet\\WebApp\\Views\\Shared\\_Product.cshtml",
               "RelativeDocumentMoniker": "WebApp\\Views\\Shared\\_Product.cshtml",
-              "ToolTip": "C:\\Users\\PC\\Desktop\\.net\\WebApp\\WebApp\\Views\\Shared\\_Product.cshtml",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\web\\.net\\dotnet\\WebApp\\Views\\Shared\\_Product.cshtml",
               "RelativeToolTip": "WebApp\\Views\\Shared\\_Product.cshtml",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAAC8AAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -343,11 +440,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 12,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\.net\\WebApp\\WebApp\\Views\\Product\\Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\web\\.net\\dotnet\\WebApp\\Views\\Product\\Index.cshtml",
               "RelativeDocumentMoniker": "WebApp\\Views\\Product\\Index.cshtml",
-              "ToolTip": "C:\\Users\\PC\\Desktop\\.net\\WebApp\\WebApp\\Views\\Product\\Index.cshtml",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\web\\.net\\dotnet\\WebApp\\Views\\Product\\Index.cshtml",
               "RelativeToolTip": "WebApp\\Views\\Product\\Index.cshtml",
               "ViewState": "AgIAABoAAAAAAAAAAAAIwCwAAABMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -355,11 +452,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 11,
               "Title": "Upsert.cshtml",
-              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\.net\\WebApp\\WebApp\\Views\\Product\\Upsert.cshtml",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\web\\.net\\dotnet\\WebApp\\Views\\Product\\Upsert.cshtml",
               "RelativeDocumentMoniker": "WebApp\\Views\\Product\\Upsert.cshtml",
-              "ToolTip": "C:\\Users\\PC\\Desktop\\.net\\WebApp\\WebApp\\Views\\Product\\Upsert.cshtml",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\web\\.net\\dotnet\\WebApp\\Views\\Product\\Upsert.cshtml",
               "RelativeToolTip": "WebApp\\Views\\Product\\Upsert.cshtml",
               "ViewState": "AgIAABsAAAAAAAAAAAAAAD4AAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -367,23 +464,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\.net\\WebApp\\WebApp\\Views\\Cart\\Index.cshtml",
-              "RelativeDocumentMoniker": "WebApp\\Views\\Cart\\Index.cshtml",
-              "ToolTip": "C:\\Users\\PC\\Desktop\\.net\\WebApp\\WebApp\\Views\\Cart\\Index.cshtml",
-              "RelativeToolTip": "WebApp\\Views\\Cart\\Index.cshtml",
-              "ViewState": "AgIAAEYAAAAAAAAAAAAAAGcAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-26T17:18:41.999Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 20,
               "Title": "AppDBContext.cs",
-              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\.net\\WebApp\\WebApp\\Data\\AppDBContext.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\web\\.net\\dotnet\\WebApp\\Data\\AppDBContext.cs",
               "RelativeDocumentMoniker": "WebApp\\Data\\AppDBContext.cs",
-              "ToolTip": "C:\\Users\\PC\\Desktop\\.net\\WebApp\\WebApp\\Data\\AppDBContext.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\web\\.net\\dotnet\\WebApp\\Data\\AppDBContext.cs",
               "RelativeToolTip": "WebApp\\Data\\AppDBContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -391,23 +476,24 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 24,
               "Title": "CategoryController.cs",
-              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\.net\\WebApp\\WebApp\\Controllers\\CategoryController.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\web\\.net\\dotnet\\WebApp\\Controllers\\CategoryController.cs",
               "RelativeDocumentMoniker": "WebApp\\Controllers\\CategoryController.cs",
-              "ToolTip": "C:\\Users\\PC\\Desktop\\.net\\WebApp\\WebApp\\Controllers\\CategoryController.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\web\\.net\\dotnet\\WebApp\\Controllers\\CategoryController.cs",
               "RelativeToolTip": "WebApp\\Controllers\\CategoryController.cs",
               "ViewState": "AgIAAAoAAAAAAAAAAAA1wCcAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-27T09:57:46.701Z"
+              "WhenOpened": "2025-11-27T09:57:46.701Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 21,
               "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\.net\\WebApp\\WebApp\\Controllers\\HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\web\\.net\\dotnet\\WebApp\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "WebApp\\Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Users\\PC\\Desktop\\.net\\WebApp\\WebApp\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\web\\.net\\dotnet\\WebApp\\Controllers\\HomeController.cs",
               "RelativeToolTip": "WebApp\\Controllers\\HomeController.cs",
               "ViewState": "AgIAABYAAAAAAAAAAAAgwBsAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -415,11 +501,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 27,
               "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\.net\\WebApp\\WebApp\\Views\\Shared\\_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\web\\.net\\dotnet\\WebApp\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "WebApp\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\PC\\Desktop\\.net\\WebApp\\WebApp\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\web\\.net\\dotnet\\WebApp\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "WebApp\\Views\\Shared\\_Layout.cshtml",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAACEAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -427,11 +513,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 26,
               "Title": "ProductController.cs",
-              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\.net\\WebApp\\WebApp\\Controllers\\ProductController.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\web\\.net\\dotnet\\WebApp\\Controllers\\ProductController.cs",
               "RelativeDocumentMoniker": "WebApp\\Controllers\\ProductController.cs",
-              "ToolTip": "C:\\Users\\PC\\Desktop\\.net\\WebApp\\WebApp\\Controllers\\ProductController.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\web\\.net\\dotnet\\WebApp\\Controllers\\ProductController.cs",
               "RelativeToolTip": "WebApp\\Controllers\\ProductController.cs",
               "ViewState": "AgIAADYAAAAAAAAAAAAmwFYAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -439,11 +525,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 40,
               "Title": "AppUser.cs",
-              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\.net\\WebApp\\WebApp\\Data\\AppUser.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\web\\.net\\dotnet\\WebApp\\Data\\AppUser.cs",
               "RelativeDocumentMoniker": "WebApp\\Data\\AppUser.cs",
-              "ToolTip": "C:\\Users\\PC\\Desktop\\.net\\WebApp\\WebApp\\Data\\AppUser.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\web\\.net\\dotnet\\WebApp\\Data\\AppUser.cs",
               "RelativeToolTip": "WebApp\\Data\\AppUser.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -451,11 +537,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 25,
               "Title": "Category.cs",
-              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\.net\\WebApp\\WebApp\\Models\\Category.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\web\\.net\\dotnet\\WebApp\\Models\\Category.cs",
               "RelativeDocumentMoniker": "WebApp\\Models\\Category.cs",
-              "ToolTip": "C:\\Users\\PC\\Desktop\\.net\\WebApp\\WebApp\\Models\\Category.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\web\\.net\\dotnet\\WebApp\\Models\\Category.cs",
               "RelativeToolTip": "WebApp\\Models\\Category.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -463,11 +549,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 23,
               "Title": "BaseController.cs",
-              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\.net\\WebApp\\WebApp\\Controllers\\BaseController.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\web\\.net\\dotnet\\WebApp\\Controllers\\BaseController.cs",
               "RelativeDocumentMoniker": "WebApp\\Controllers\\BaseController.cs",
-              "ToolTip": "C:\\Users\\PC\\Desktop\\.net\\WebApp\\WebApp\\Controllers\\BaseController.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\web\\.net\\dotnet\\WebApp\\Controllers\\BaseController.cs",
               "RelativeToolTip": "WebApp\\Controllers\\BaseController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -475,11 +561,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 35,
               "Title": "style.css",
-              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\.net\\WebApp\\WebApp\\wwwroot\\css\\style.css",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\web\\.net\\dotnet\\WebApp\\wwwroot\\css\\style.css",
               "RelativeDocumentMoniker": "WebApp\\wwwroot\\css\\style.css",
-              "ToolTip": "C:\\Users\\PC\\Desktop\\.net\\WebApp\\WebApp\\wwwroot\\css\\style.css",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\web\\.net\\dotnet\\WebApp\\wwwroot\\css\\style.css",
               "RelativeToolTip": "WebApp\\wwwroot\\css\\style.css",
               "ViewState": "AgIAAJgNAAAAAAAAAAASwKQNAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
@@ -487,11 +573,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 22,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\.net\\WebApp\\WebApp\\Views\\Home\\Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\web\\.net\\dotnet\\WebApp\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "WebApp\\Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\PC\\Desktop\\.net\\WebApp\\WebApp\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\web\\.net\\dotnet\\WebApp\\Views\\Home\\Index.cshtml",
               "RelativeToolTip": "WebApp\\Views\\Home\\Index.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -499,11 +585,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 31,
               "Title": "bootstrap.css",
-              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\.net\\WebApp\\WebApp\\wwwroot\\css\\bootstrap.css",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\web\\.net\\dotnet\\WebApp\\wwwroot\\css\\bootstrap.css",
               "RelativeDocumentMoniker": "WebApp\\wwwroot\\css\\bootstrap.css",
-              "ToolTip": "C:\\Users\\PC\\Desktop\\.net\\WebApp\\WebApp\\wwwroot\\css\\bootstrap.css",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\web\\.net\\dotnet\\WebApp\\wwwroot\\css\\bootstrap.css",
               "RelativeToolTip": "WebApp\\wwwroot\\css\\bootstrap.css",
               "ViewState": "AgIAADASAAAAAAAAAAAwwFMSAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
@@ -511,11 +597,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 32,
               "Title": "flaticon.css",
-              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\.net\\WebApp\\WebApp\\wwwroot\\css\\flaticon.css",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\web\\.net\\dotnet\\WebApp\\wwwroot\\css\\flaticon.css",
               "RelativeDocumentMoniker": "WebApp\\wwwroot\\css\\flaticon.css",
-              "ToolTip": "C:\\Users\\PC\\Desktop\\.net\\WebApp\\WebApp\\wwwroot\\css\\flaticon.css",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\web\\.net\\dotnet\\WebApp\\wwwroot\\css\\flaticon.css",
               "RelativeToolTip": "WebApp\\wwwroot\\css\\flaticon.css",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
@@ -523,11 +609,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 29,
               "Title": "bootstrap-grid.rtl.css.map",
-              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\.net\\WebApp\\WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\web\\.net\\dotnet\\WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
               "RelativeDocumentMoniker": "WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
-              "ToolTip": "C:\\Users\\PC\\Desktop\\.net\\WebApp\\WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\web\\.net\\dotnet\\WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
               "RelativeToolTip": "WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAACrogIAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
@@ -535,11 +621,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 28,
               "Title": "bootstrap-reboot.css.map",
-              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\.net\\WebApp\\WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\web\\.net\\dotnet\\WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
               "RelativeDocumentMoniker": "WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
-              "ToolTip": "C:\\Users\\PC\\Desktop\\.net\\WebApp\\WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\web\\.net\\dotnet\\WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
               "RelativeToolTip": "WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAACXpAEAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
@@ -547,11 +633,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 39,
               "Title": "font-awesome.min.css",
-              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\.net\\WebApp\\WebApp\\wwwroot\\css\\font-awesome.min.css",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\web\\.net\\dotnet\\WebApp\\wwwroot\\css\\font-awesome.min.css",
               "RelativeDocumentMoniker": "WebApp\\wwwroot\\css\\font-awesome.min.css",
-              "ToolTip": "C:\\Users\\PC\\Desktop\\.net\\WebApp\\WebApp\\wwwroot\\css\\font-awesome.min.css",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\web\\.net\\dotnet\\WebApp\\wwwroot\\css\\font-awesome.min.css",
               "RelativeToolTip": "WebApp\\wwwroot\\css\\font-awesome.min.css",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
@@ -559,11 +645,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 37,
               "Title": "site.css",
-              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\.net\\WebApp\\WebApp\\wwwroot\\css\\site.css",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\web\\.net\\dotnet\\WebApp\\wwwroot\\css\\site.css",
               "RelativeDocumentMoniker": "WebApp\\wwwroot\\css\\site.css",
-              "ToolTip": "C:\\Users\\PC\\Desktop\\.net\\WebApp\\WebApp\\wwwroot\\css\\site.css",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\web\\.net\\dotnet\\WebApp\\wwwroot\\css\\site.css",
               "RelativeToolTip": "WebApp\\wwwroot\\css\\site.css",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
@@ -571,23 +657,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "Order.cs",
-              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\.net\\WebApp\\WebApp\\Models\\Order.cs",
-              "RelativeDocumentMoniker": "WebApp\\Models\\Order.cs",
-              "ToolTip": "C:\\Users\\PC\\Desktop\\.net\\WebApp\\WebApp\\Models\\Order.cs",
-              "RelativeToolTip": "WebApp\\Models\\Order.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-26T18:20:45.155Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 38,
               "Title": "responsive.css",
-              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\.net\\WebApp\\WebApp\\wwwroot\\css\\responsive.css",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\web\\.net\\dotnet\\WebApp\\wwwroot\\css\\responsive.css",
               "RelativeDocumentMoniker": "WebApp\\wwwroot\\css\\responsive.css",
-              "ToolTip": "C:\\Users\\PC\\Desktop\\.net\\WebApp\\WebApp\\wwwroot\\css\\responsive.css",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\web\\.net\\dotnet\\WebApp\\wwwroot\\css\\responsive.css",
               "RelativeToolTip": "WebApp\\wwwroot\\css\\responsive.css",
               "ViewState": "AgIAAB8AAAAAAAAAAAAjwDMAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
@@ -595,11 +669,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 34,
               "Title": "style.map",
-              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\.net\\WebApp\\WebApp\\wwwroot\\css\\style.map",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\web\\.net\\dotnet\\WebApp\\wwwroot\\css\\style.map",
               "RelativeDocumentMoniker": "WebApp\\wwwroot\\css\\style.map",
-              "ToolTip": "C:\\Users\\PC\\Desktop\\.net\\WebApp\\WebApp\\wwwroot\\css\\style.map",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\web\\.net\\dotnet\\WebApp\\wwwroot\\css\\style.map",
               "RelativeToolTip": "WebApp\\wwwroot\\css\\style.map",
               "ViewState": "AgIAABIAAAAAAAAAAAAAACEAAAAqCAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
@@ -607,11 +681,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 33,
               "Title": "_product.scss",
-              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\.net\\WebApp\\WebApp\\wwwroot\\scss\\_product.scss",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\web\\.net\\dotnet\\WebApp\\wwwroot\\scss\\_product.scss",
               "RelativeDocumentMoniker": "WebApp\\wwwroot\\scss\\_product.scss",
-              "ToolTip": "C:\\Users\\PC\\Desktop\\.net\\WebApp\\WebApp\\wwwroot\\scss\\_product.scss",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\web\\.net\\dotnet\\WebApp\\wwwroot\\scss\\_product.scss",
               "RelativeToolTip": "WebApp\\wwwroot\\scss\\_product.scss",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002663|",
@@ -619,11 +693,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 41,
               "Title": "UserController.cs",
-              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\.net\\WebApp\\WebApp\\Controllers\\UserController.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\web\\.net\\dotnet\\WebApp\\Controllers\\UserController.cs",
               "RelativeDocumentMoniker": "WebApp\\Controllers\\UserController.cs",
-              "ToolTip": "C:\\Users\\PC\\Desktop\\.net\\WebApp\\WebApp\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\web\\.net\\dotnet\\WebApp\\Controllers\\UserController.cs",
               "RelativeToolTip": "WebApp\\Controllers\\UserController.cs",
               "ViewState": "AgIAAEMAAAAAAAAAAAAcwEwAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -631,11 +705,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 36,
               "Title": "themify-icons.css",
-              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\.net\\WebApp\\WebApp\\wwwroot\\css\\themify-icons.css",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\web\\.net\\dotnet\\WebApp\\wwwroot\\css\\themify-icons.css",
               "RelativeDocumentMoniker": "WebApp\\wwwroot\\css\\themify-icons.css",
-              "ToolTip": "C:\\Users\\PC\\Desktop\\.net\\WebApp\\WebApp\\wwwroot\\css\\themify-icons.css",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\web\\.net\\dotnet\\WebApp\\wwwroot\\css\\themify-icons.css",
               "RelativeToolTip": "WebApp\\wwwroot\\css\\themify-icons.css",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
@@ -643,11 +717,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 42,
               "Title": "Register.cshtml",
-              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\.net\\WebApp\\WebApp\\Views\\User\\Register.cshtml",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\web\\.net\\dotnet\\WebApp\\Views\\User\\Register.cshtml",
               "RelativeDocumentMoniker": "WebApp\\Views\\User\\Register.cshtml",
-              "ToolTip": "C:\\Users\\PC\\Desktop\\.net\\WebApp\\WebApp\\Views\\User\\Register.cshtml",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\web\\.net\\dotnet\\WebApp\\Views\\User\\Register.cshtml",
               "RelativeToolTip": "WebApp\\Views\\User\\Register.cshtml",
               "ViewState": "AgIAABoAAAAAAAAAAAAowDYAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -655,11 +729,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 43,
               "Title": "Login.cshtml",
-              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\.net\\WebApp\\WebApp\\Views\\User\\Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\web\\.net\\dotnet\\WebApp\\Views\\User\\Login.cshtml",
               "RelativeDocumentMoniker": "WebApp\\Views\\User\\Login.cshtml",
-              "ToolTip": "C:\\Users\\PC\\Desktop\\.net\\WebApp\\WebApp\\Views\\User\\Login.cshtml",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\web\\.net\\dotnet\\WebApp\\Views\\User\\Login.cshtml",
               "RelativeToolTip": "WebApp\\Views\\User\\Login.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -667,11 +741,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 44,
               "Title": "_ValidationScriptsPartial.cshtml",
-              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\.net\\WebApp\\WebApp\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\web\\.net\\dotnet\\WebApp\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
               "RelativeDocumentMoniker": "WebApp\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
-              "ToolTip": "C:\\Users\\PC\\Desktop\\.net\\WebApp\\WebApp\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\web\\.net\\dotnet\\WebApp\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
               "RelativeToolTip": "WebApp\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -679,11 +753,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 45,
               "Title": "Default.cshtml",
-              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\.net\\WebApp\\WebApp\\Views\\Shared\\Components\\Category\\Default.cshtml",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\web\\.net\\dotnet\\WebApp\\Views\\Shared\\Components\\Category\\Default.cshtml",
               "RelativeDocumentMoniker": "WebApp\\Views\\Shared\\Components\\Category\\Default.cshtml",
-              "ToolTip": "C:\\Users\\PC\\Desktop\\.net\\WebApp\\WebApp\\Views\\Shared\\Components\\Category\\Default.cshtml",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\web\\.net\\dotnet\\WebApp\\Views\\Shared\\Components\\Category\\Default.cshtml",
               "RelativeToolTip": "WebApp\\Views\\Shared\\Components\\Category\\Default.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -691,15 +765,29 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 46,
               "Title": "_LoginPartial.cshtml",
-              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\.net\\WebApp\\WebApp\\Views\\Shared\\_LoginPartial.cshtml",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\web\\.net\\dotnet\\WebApp\\Views\\Shared\\_LoginPartial.cshtml",
               "RelativeDocumentMoniker": "WebApp\\Views\\Shared\\_LoginPartial.cshtml",
-              "ToolTip": "C:\\Users\\PC\\Desktop\\.net\\WebApp\\WebApp\\Views\\Shared\\_LoginPartial.cshtml",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\web\\.net\\dotnet\\WebApp\\Views\\Shared\\_LoginPartial.cshtml",
               "RelativeToolTip": "WebApp\\Views\\Shared\\_LoginPartial.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-11-26T14:42:49.799Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 938,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{a80febb4-e7e0-4147-b476-21aaf2453969}"
             }
           ]
         }

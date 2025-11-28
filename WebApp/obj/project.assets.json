@@ -8424,23 +8424,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\PC\\.nuget\\packages\\": {},
+    "C:\\Users\\LENOVO\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\PC\\Desktop\\.net\\WebApp\\WebApp\\WebApp.csproj",
+      "projectUniqueName": "C:\\Users\\LENOVO\\Desktop\\web\\.net\\dotnet\\WebApp\\WebApp.csproj",
       "projectName": "WebApp",
-      "projectPath": "C:\\Users\\PC\\Desktop\\.net\\WebApp\\WebApp\\WebApp.csproj",
-      "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\PC\\Desktop\\.net\\WebApp\\WebApp\\obj\\",
+      "projectPath": "C:\\Users\\LENOVO\\Desktop\\web\\.net\\dotnet\\WebApp\\WebApp.csproj",
+      "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\LENOVO\\Desktop\\web\\.net\\dotnet\\WebApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\LENOVO\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -8523,7 +8523,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.306/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

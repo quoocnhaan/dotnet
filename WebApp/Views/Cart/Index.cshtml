@@ -1,16 +1,20 @@
 ﻿@using WebApp.Data
 
-@model Order
+@model List<Order>
 
 @{
     ViewData["Title"] = "Cart Index";
+    List<OrderProduct> orderProducts = Model?
+    .SelectMany(o => o.OrderProducts ?? new List<OrderProduct>())
+    .ToList() ?? new List<OrderProduct>();
 
-    List<OrderProduct> orderProducts = Model?.OrderProducts?.ToList() ?? new List<OrderProduct>();
+    double grandTotal = Model?.Sum(o => o.GetTotal()) ?? 0;
+
 }
 <div class="container">
     <div class="cart_inner">
+
         <form asp-controller="Cart" asp-action="Update" method="post">
-            <input type="hidden" name="orderId" value="@Model?.Id" />
             <div class="table-responsive">
                 <table class="table">
                     <thead>
@@ -27,6 +31,7 @@
                             @for (int i = 0; i < orderProducts.Count; i++)
                             {
                                 var orderProduct = orderProducts[i];
+                                <input type="hidden" name="orderProducts[@i].Id" value="@orderProduct.Id" />
                                 <tr>
                                     <td>
                                         <div class="media">
@@ -98,7 +103,7 @@
                                     <h5>Subtotal</h5>
                                 </td>
                                 <td>
-                                    <h5 id="total">@Model.GetTotal().ToString("C", System.Globalization.CultureInfo.CurrentCulture)</h5>
+                                    <h5 id="total">@grandTotal.ToString("C", System.Globalization.CultureInfo.CurrentCulture)</h5>
                                 </td>
                             </tr>
                         }

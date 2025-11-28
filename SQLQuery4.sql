@@ -1,5 +1,3 @@
-DELETE FROM Products;
-DELETE FROM Categories;
 
 DBCC CHECKIDENT ('Categories', RESEED, 0);
 DBCC CHECKIDENT ('Products', RESEED, 0);
