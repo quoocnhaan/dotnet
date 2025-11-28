@@ -20,5 +20,8 @@ namespace WebApp.Data
         public DbSet<Order> Orders { get; set; } = null!;
         public DbSet<Category> Categories { get; set; } = null!;
         public DbSet<OrderProduct> OrderProducts { get; set; } = null!;
+
+        public DbSet<Cart> Carts { get; set; } = null!;
+        public DbSet<CartItem> CartItems { get; set; } = null!;
     }
 }

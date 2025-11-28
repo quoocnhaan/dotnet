@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using WebApp.Data;
+using WebApp.Service;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,8 +10,14 @@ var connectionString = builder.Configuration.GetConnectionString("DefaultConnect
                        ?? throw new InvalidOperationException("Connection string 'AppDBContextConnection' not found.");
 
 // Add DbContext with SQL Server
-builder.Services.AddDbContext<AppDBContext>(options =>
-    options.UseSqlServer(connectionString));
+//builder.Services.AddDbContext<AppDBContext>(options =>
+//    options.UseSqlServer(connectionString));
+
+builder.Services.AddDbContextFactory<AppDBContext>(options =>
+{
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
+});
+
 
 // Add Identity services
 builder.Services.AddDefaultIdentity<AppUser>(options =>
@@ -24,6 +31,18 @@ builder.Services.AddControllersWithViews();
 
 // Optional: Add Razor Pages if you scaffold Identity pages
 builder.Services.AddRazorPages();
+
+builder.Services.AddScoped<CartService>();
+builder.Services.AddScoped<UserService>();
+
+builder.Services.AddDistributedMemoryCache();
+
+builder.Services.AddHttpContextAccessor();
+
+builder.Services.AddSession(cfg => {                   
+    cfg.Cookie.Name = "quocnhan";            
+    cfg.IdleTimeout = new TimeSpan(0, 30, 0);    
+});
 
 var app = builder.Build();
 
@@ -41,6 +60,8 @@ app.UseRouting();
 app.UseAuthentication();
 
 app.UseAuthorization();
+
+app.UseSession();
 
 // Map routes
 app.MapControllerRoute(

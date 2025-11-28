@@ -1,43 +1,48 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Threading.Tasks;
 using WebApp.Data;
 using WebApp.Models;
+using WebApp.Service;
 
 namespace WebApp.Controllers
 {
     public class CategoryController : BaseController
     {
-        public CategoryController(UserManager<AppUser> userManager, AppDBContext context)
-    : base(userManager, context)
+        private readonly CartService _cartService;
+
+        public CategoryController(IDbContextFactory<AppDBContext> context, CartService cartService, UserService userService)
+    : base(context, userService)
         {
+            _cartService = cartService;
         }
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
             List<Category> categories = _context.Categories.Include(c => c.Products).ToList();
-            SetCartProductCount();
+            await _cartService.SetCartProductCount();
 
             return View(categories);
         }
 
-        public IActionResult Create()
+        public async Task<IActionResult> Create()
         {
-            SetCartProductCount();
+            await _cartService.SetCartProductCount();
 
             return View("Upsert", new Category());
         }
 
-        public IActionResult Edit(int id)
+        public async Task<IActionResult> Edit(int id)
         {
             var category = _context.Categories.FirstOrDefault(c => c.Id == id);
-            SetCartProductCount();
+            await _cartService.SetCartProductCount();
             return View("Upsert", category);
         }
 
-        public IActionResult Delete(int id)
+        public async Task<IActionResult> Delete(int id)
         {
             var category = _context.Categories.FirstOrDefault(c => c.Id == id);
-            SetCartProductCount();
+            await _cartService.SetCartProductCount();
             return View(category);
         }
 

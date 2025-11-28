@@ -4,26 +4,29 @@ using Microsoft.CodeAnalysis;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Diagnostics;
+using System.Threading.Tasks;
 using WebApp.Common.Constants;
 using WebApp.Data;
 using WebApp.Models;
+using WebApp.Service;
 
 namespace WebApp.Controllers
 {
     public class HomeController : BaseController
     {
+        private readonly CartService _cartService;
 
-
-        public HomeController(UserManager<AppUser> userManager, AppDBContext context)
-            : base(userManager, context)
+        public HomeController(IDbContextFactory<AppDBContext> context, CartService cartService, UserService userService)
+            : base(context, userService)
         {
+            _cartService = cartService;
         }
 
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {           
             List<Product> products = _context.Products.ToList();
-            SetCartProductCount();
+            await _cartService.SetCartProductCount();
             return View(products);
         }
 
@@ -34,7 +37,7 @@ namespace WebApp.Controllers
                              .Include(p => p.Category)
                              .ToListAsync();
 
-            SetCartProductCount();
+            await _cartService.SetCartProductCount();
 
             return View("Index", products);
         }

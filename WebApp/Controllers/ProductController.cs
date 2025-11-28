@@ -1,27 +1,31 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Threading.Tasks;
 using WebApp.Data;
 using WebApp.Models;
+using WebApp.Service;
 
 namespace WebApp.Controllers
 {
     public class ProductController : BaseController
     {
+        private readonly CartService _cartService;
 
-        public ProductController(UserManager<AppUser> userManager, AppDBContext context)
-            : base(userManager, context)
+        public ProductController(IDbContextFactory<AppDBContext> context, CartService cartService, UserService userService)
+            : base(context, userService)
         {
+            _cartService = cartService;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
             List<Product> products = _context.Products.Include(p => p.Category).ToList();
-            SetCartProductCount();
+            await _cartService.SetCartProductCount();
             return View(products);
         }
 
-        public IActionResult Detail(int id)
+        public async Task<IActionResult> Detail(int id)
         {
             var product = _context.Products
                                   .Include(p => p.Category)
@@ -30,30 +34,30 @@ namespace WebApp.Controllers
             if (product == null)
                 return NotFound();
 
-            SetCartProductCount();
+            await _cartService.SetCartProductCount();
             return View(product);
         }
 
-        public IActionResult Create()
+        public async Task<IActionResult> Create()
         {
             ViewData["Category"] = _context.Categories.ToList();
-            SetCartProductCount();
+            await _cartService.SetCartProductCount();
 
             return View("Upsert", new Product());
         }
 
-        public IActionResult Edit(int id)
+        public async Task<IActionResult> Edit(int id)
         {
             ViewData["Category"] = _context.Categories.ToList();
             var product = _context.Products.Include(p => p.Category).FirstOrDefault(p => p.Id == id);
-            SetCartProductCount();
+            await _cartService.SetCartProductCount();
             return View("Upsert", product);
         }
 
-        public IActionResult Delete(int id)
+        public async Task<IActionResult> Delete(int id)
         {
             var product = _context.Products.Find(id);
-            SetCartProductCount();
+            await _cartService.SetCartProductCount();
             return View(product);
         }
 

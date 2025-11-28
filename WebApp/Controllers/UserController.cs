@@ -1,7 +1,9 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using WebApp.Data;
 using WebApp.Models;
+using WebApp.Service;
 
 namespace WebApp.Controllers
 {
@@ -10,10 +12,9 @@ namespace WebApp.Controllers
         private readonly SignInManager<AppUser> _signInManager;
         private readonly IUserStore<AppUser> _userStore;
 
-        public UserController(AppDBContext context,
-            UserManager<AppUser> userManager,
+        public UserController(IDbContextFactory<AppDBContext> context,
             IUserStore<AppUser> userStore,
-            SignInManager<AppUser> signInManager) : base(userManager, context)
+            SignInManager<AppUser> signInManager, UserService userService) : base(context, userService)
         {
             _userStore = userStore;
             _signInManager = signInManager;
@@ -89,24 +90,12 @@ namespace WebApp.Controllers
                 user.Gender = model.Gender;
                 user.EmailConfirmed = true;
 
-                var result = await _userManager.CreateAsync(user, model.Password);
+                var result = await _userService.CreateUser(user, model.Password);
 
                 if (result.Succeeded)
                 {
-
-                    var userId = await _userManager.GetUserIdAsync(user);
-                    var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
-
-
-                    if (_userManager.Options.SignIn.RequireConfirmedAccount)
-                    {
-                        return RedirectToPage("RegisterConfirmation", new { email = model.Email, returnUrl = returnUrl });
-                    }
-                    else
-                    {
-                        await _signInManager.SignInAsync(user, isPersistent: false);
-                        return LocalRedirect(returnUrl);
-                    }
+                    await _signInManager.SignInAsync(user, isPersistent: false);
+                    return LocalRedirect(returnUrl);
                 }
                 foreach (var error in result.Errors)
                 {

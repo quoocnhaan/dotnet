@@ -1,17 +1,11 @@
 ﻿@using Microsoft.AspNetCore.Identity
 @using WebApp.Data
+@using WebApp.Service;
 
-@inject SignInManager<AppUser> SignInManager
-@inject UserManager<AppUser> UserManager
+@inject IHttpContextAccessor HttpContextAccessor;
 
 @{
-    int productCount = TempData["CartProductCount"] != null ? Convert.ToInt32(TempData["CartProductCount"]): 0;
-    string userId = null;
-    if (SignInManager.IsSignedIn(User))
-    {
-        var user = await UserManager.GetUserAsync(User);
-        userId = user?.Id;
-    }
+    int productCount = HttpContextAccessor.HttpContext.Session.GetInt32("CartProductCount") ?? 0;
 }
 
 <ul class="nav navbar-nav navbar-right right_nav pull-right">
@@ -21,10 +15,10 @@
         </a>
     </li>
 
-@if (SignInManager.IsSignedIn(User))
+    @if (User.Identity.IsAuthenticated)
 {
         <li class="nav-item">
-            <a asp-controller="Cart" asp-action="Index" asp-route-id="@userId" class="icons">
+            <a asp-controller="Cart" asp-action="Index" class="icons">
                 <i class="ti-shopping-cart"></i>
                 @if (productCount > 0)
                 {

@@ -1,6 +1,6 @@
 ﻿namespace WebApp.Models
 {
-    public class OrderProductUpdateModel
+    public class CartItemUpdateModel
     {
         public int Id { get; set; }
         public int ProductId { get; set; }
