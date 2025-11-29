@@ -46,9 +46,22 @@ namespace WebApp.Service
             await SetCartProductCount();
         }
 
-        public void ClearCart()
+        public async Task ClearCartAsync()
         {
             Session.Remove(CARTKEY);
+
+            AppUser user = await _userService.GetUser();
+            var cart = await _context.Carts
+                .Include(c => c.CartItems)
+                .FirstOrDefaultAsync(c => c.UserId == user.Id);
+
+            if (cart != null)
+            {
+                foreach (var item in cart.CartItems)
+                {
+                    _context.CartItems.Remove(item);
+                }
+            }
         }
 
         public async Task fetchNewDataAsync()
@@ -110,6 +123,17 @@ namespace WebApp.Service
             cart.UserId = user.Id;
             _context.Carts.Add(cart);
             _context.SaveChanges();
+        }
+
+        public List<CartItem> GetCartItemsFromDB()
+        {
+            AppUser user =  _userService.GetUser().Result;
+            Cart cart = _context.Carts.Include(c => c.CartItems).ThenInclude(ci => ci.Product).FirstOrDefault(c => c.UserId == user.Id);
+            if (cart != null)
+            {
+                return cart.CartItems.ToList();
+            }
+            return new List<CartItem>();
         }
     }
 }

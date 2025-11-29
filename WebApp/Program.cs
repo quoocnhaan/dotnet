@@ -34,6 +34,7 @@ builder.Services.AddRazorPages();
 
 builder.Services.AddScoped<CartService>();
 builder.Services.AddScoped<UserService>();
+builder.Services.AddScoped<OrderService>();
 
 builder.Services.AddDistributedMemoryCache();
 
