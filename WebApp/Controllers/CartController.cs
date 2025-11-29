@@ -24,12 +24,10 @@ namespace WebApp.Controllers
 
         public async Task<IActionResult> Index()
         {
-            AppUser? _user = await GetUserAsync();
-            if (_user == null)
+            if (!_userService.isLogin())
             {
                 return RedirectToAction("Login", "User");
             }
-            await _cartService.SetCartProductCount();
             return View(await _cartService.GetCartItems());
         }
 
@@ -92,90 +90,40 @@ namespace WebApp.Controllers
 
         public async Task<IActionResult> Add(int productId, string returnUrl, string queryString, int quantity = 1)
         {
-            AppUser? _user = await GetUserAsync();
-
-            if (_user == null)
+            if (!_userService.isLogin())
             {
                 return RedirectToAction("Login", "User");
             }
             else
             {
                 List<CartItem> cartItems = await _cartService.GetCartItems();
-                if (cartItems == null)
-                {
-                    Cart cart = new Cart();
-                    cart.UserId = _user.Id;
-                    _context.Carts.Add(cart);
+                AppUser _user = await _userService.GetUser();
 
-                    CartItem cartItem = new CartItem();
-                    cartItem.Cart = cart;
-                    cartItem.ProductId = productId;
-                    cartItem.Quantity = quantity;
-                    _context.CartItems.Add(cartItem);
+                CartItem? cartItem = cartItems.Find(_ => _.ProductId == productId);
+                if (cartItem != null)
+                {
+                    cartItem.Quantity += quantity;
+                    _context.CartItems.Update(cartItem);
                 }
                 else
                 {
-                    CartItem? cartItem = cartItems.Find(_ => _.ProductId == productId);
-                    if (cartItem == null)
-                    {
-                        Cart cart = _context.Carts.FirstOrDefault(c => c.UserId == _user.Id)!;
-                        cartItem = new CartItem();
-                        cartItem.Cart = cart;
-                        cartItem.ProductId = productId;
-                        cartItem.Quantity = quantity;
-                        _context.CartItems.Add(cartItem);
-                        _cartService.AddCartItemToSession(cartItem);
-                    }
-                    else
-                    {
-                        cartItem.Quantity += quantity;
-                        _context.CartItems.Update(cartItem);
-                        _cartService.UpdateCartItemInSession(cartItem.Id, cartItem.Quantity);
-                    }
+                    Cart cart = _context.Carts.FirstOrDefault(_ => _.UserId == _user.Id);
+                    cartItem = new CartItem();
+                    cartItem.Cart = cart;
+                    cartItem.Product = _context.Products.FirstOrDefault(p => p.Id == productId);
+                    cartItem.Quantity = quantity;
+                    _context.CartItems.Add(cartItem);
                 }
                 _context.SaveChanges();
+                await _cartService.fetchNewDataAsync();
+
+                if (returnUrl != "/")
+                {
+                    returnUrl = Url.Content("~") + returnUrl + queryString;
+                }
+                return Redirect(returnUrl);
             }
-            if (returnUrl != "/")
-            {
-                returnUrl = Url.Content("~") + returnUrl + queryString;
-            }
-            return Redirect(returnUrl);
         }
-
-
-        //public IActionResult Update(List<OrderProductUpdateModel> orderProducts, string returnUrl, string queryString)
-        //{
-
-        //        foreach (var orderProductUpdate in orderProducts)
-        //        {
-        //            var oldOrderProduct = _context.OrderProducts?.FirstOrDefault(op => op.Id == orderProductUpdate.Id);
-        //            if (oldOrderProduct != null)
-        //            {
-        //                int oldQuantity = oldOrderProduct.Quantity ?? 0;
-        //                int quantityDifference = orderProductUpdate.Quantity - oldQuantity;
-
-        //                if (orderProductUpdate.Quantity == 0)
-        //                {
-        //                    _context.OrderProducts.Remove(oldOrderProduct);
-        //                } else
-        //                {
-        //                    oldOrderProduct.Quantity = orderProductUpdate.Quantity;
-        //                    _context.OrderProducts.Update(oldOrderProduct);
-        //                }
-
-        //                //var product = _context.Products.Find(orderProductUpdate.ProductId);
-        //                //if (product != null)
-        //                //{
-        //                //    product.Quantity -= quantityDifference;
-        //                //    _context.Products.Update(product);
-        //                //}
-                    
-        //        }
-        //        _context.SaveChanges();
-        //    }
-        //    SetCartProductCount();
-        //    return RedirectToAction("Index");
-        //}
 
         public IActionResult Update(List<CartItemUpdateModel> cartItems, string returnUrl, string queryString)
         {
@@ -199,14 +147,6 @@ namespace WebApp.Controllers
                         _context.CartItems.Update(oldItem);
                         _cartService.UpdateCartItemInSession(oldItem.Id, newItem.Quantity);
                     }
-
-                    //var product = _context.Products.Find(orderProductUpdate.ProductId);
-                    //if (product != null)
-                    //{
-                    //    product.Quantity -= quantityDifference;
-                    //    _context.Products.Update(product);
-                    //}
-
                 }
             }
             _context.SaveChanges();

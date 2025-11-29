@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Cors.Infrastructure;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.CodeAnalysis;
@@ -23,10 +24,10 @@ namespace WebApp.Controllers
         }
 
 
-        public async Task<IActionResult> Index()
+        public IActionResult Index()
         {           
             List<Product> products = _context.Products.ToList();
-            await _cartService.SetCartProductCount();
+            _cartService.SetCartProductCount().Wait();
             return View(products);
         }
 
@@ -36,8 +37,6 @@ namespace WebApp.Controllers
                              .Where(p => p.CategoryId == categoryId)
                              .Include(p => p.Category)
                              .ToListAsync();
-
-            await _cartService.SetCartProductCount();
 
             return View("Index", products);
         }

@@ -10,14 +10,16 @@ namespace WebApp.Controllers
     public class UserController : BaseController
     {
         private readonly SignInManager<AppUser> _signInManager;
+        private readonly CartService _cartService;
         private readonly IUserStore<AppUser> _userStore;
 
         public UserController(IDbContextFactory<AppDBContext> context,
             IUserStore<AppUser> userStore,
-            SignInManager<AppUser> signInManager, UserService userService) : base(context, userService)
+            SignInManager<AppUser> signInManager, UserService userService, CartService cartService) : base(context, userService)
         {
             _userStore = userStore;
             _signInManager = signInManager;
+            _cartService = cartService;
         }
         public IActionResult Index()
         {
@@ -45,6 +47,7 @@ namespace WebApp.Controllers
                 var result = await _signInManager.PasswordSignInAsync(model.UserName, model.Password, model.RememberMe, lockoutOnFailure: false);
                 if (result.Succeeded)
                 {
+                    _cartService.fetchNewDataAsync().Wait();
                     return RedirectToAction("Index", "Home");
                 }
                 else
@@ -95,6 +98,8 @@ namespace WebApp.Controllers
                 if (result.Succeeded)
                 {
                     await _signInManager.SignInAsync(user, isPersistent: false);
+                    _cartService.CreateNewCartAsync().Wait();
+                    _cartService.fetchNewDataAsync().Wait();
                     return LocalRedirect(returnUrl);
                 }
                 foreach (var error in result.Errors)

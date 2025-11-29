@@ -31,18 +31,19 @@ namespace WebApp.Service
 
             List<CartItem> cartItems = await GetCartItems();
 
-            int cartProductCount = cartItems.Sum(ci => ci.Quantity);
+            int cartProductCount = cartItems != null ? cartItems.Sum(ci => ci.Quantity) : 0;
 
             Session.SetInt32("CartProductCount", cartProductCount);
         }
 
-        public void SaveCartSession(List<CartItem> ls)
+        public async Task SaveCartSessionAsync(List<CartItem> ls)
         {
             string jsoncart = JsonConvert.SerializeObject(ls, new JsonSerializerSettings
             {
                 ReferenceLoopHandling = ReferenceLoopHandling.Ignore
             });
             Session.SetString(CARTKEY, jsoncart);
+            await SetCartProductCount();
         }
 
         public void ClearCart()
@@ -50,8 +51,24 @@ namespace WebApp.Service
             Session.Remove(CARTKEY);
         }
 
+        public async Task fetchNewDataAsync()
+        {
+            AppUser user = await _userService.GetUser();
+
+            Cart cart = _context.Carts.Include(c => c.CartItems).ThenInclude(ci => ci.Product).FirstOrDefault(c => c.UserId == user.Id);
+            if(cart != null)
+            {
+                SaveCartSessionAsync(cart.CartItems.ToList());
+
+            } else
+            {
+                SaveCartSessionAsync(new List<CartItem>());
+            }
+        }
+
         public async Task<List<CartItem>> GetCartItems()
         {
+            if (!_userService.isLogin()) return null;
             string jsoncart = Session.GetString(CARTKEY);
             if (jsoncart != null)
             {
@@ -59,30 +76,9 @@ namespace WebApp.Service
             }
             else
             {
-                AppUser user = await _userService.GetUser();
-                Cart cart = _context.Carts.Include(c => c.CartItems).ThenInclude(ci => ci.Product).FirstOrDefault(c => c.UserId == user.Id);
-                if (cart == null)
-                {
-                    return null;
-                }
-                else
-                {
-                    List <CartItem> list = cart.CartItems.ToList();
-                    SaveCartSession(list);
-                    return list;
-                }
+                await fetchNewDataAsync();
+                return await GetCartItems();          
             }
-        }
-
-        public CartItem GetCartItem(int cartItemId)
-        {
-            string json = Session.GetString(CARTKEY);
-            if (json == null)
-                return null;
-
-            var items = JsonConvert.DeserializeObject<List<CartItem>>(json);
-
-            return items.FirstOrDefault(i => i.Id == cartItemId);
         }
 
         public async Task RemoveCartItemFromSession(int cartItemId)
@@ -92,7 +88,7 @@ namespace WebApp.Service
             if (itemToRemove != null)
             {
                 items.Remove(itemToRemove);
-                SaveCartSession(items);
+                SaveCartSessionAsync(items);
             }
         }
 
@@ -103,15 +99,17 @@ namespace WebApp.Service
             if (itemToUpdate != null)
             {
                 itemToUpdate.Quantity = newQuantity;
-                SaveCartSession(items);
+                SaveCartSessionAsync(items);
             }
         }
 
-        public async Task AddCartItemToSession(CartItem cartItem)
+        public async Task CreateNewCartAsync()
         {
-            var items = await GetCartItems();
-            items.Add(cartItem);
-            SaveCartSession(items);
+            AppUser user = await _userService.GetUser();
+            Cart cart = new Cart();
+            cart.UserId = user.Id;
+            _context.Carts.Add(cart);
+            _context.SaveChanges();
         }
     }
 }

@@ -27,6 +27,9 @@ namespace WebApp.Service
             return await _userManager.CreateAsync(user, password);
         }
 
-         
+        public bool isLogin()
+        {
+            return _httpContextAccessor.HttpContext?.User?.Identity?.IsAuthenticated ?? false;
+        }
     }
 }

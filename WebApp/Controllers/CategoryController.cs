@@ -17,32 +17,27 @@ namespace WebApp.Controllers
         {
             _cartService = cartService;
         }
-        public async Task<IActionResult> Index()
+        public IActionResult Index()
         {
             List<Category> categories = _context.Categories.Include(c => c.Products).ToList();
-            await _cartService.SetCartProductCount();
 
             return View(categories);
         }
 
-        public async Task<IActionResult> Create()
+        public IActionResult Create()
         {
-            await _cartService.SetCartProductCount();
-
             return View("Upsert", new Category());
         }
 
-        public async Task<IActionResult> Edit(int id)
+        public IActionResult Edit(int id)
         {
             var category = _context.Categories.FirstOrDefault(c => c.Id == id);
-            await _cartService.SetCartProductCount();
             return View("Upsert", category);
         }
 
-        public async Task<IActionResult> Delete(int id)
+        public IActionResult Delete(int id)
         {
             var category = _context.Categories.FirstOrDefault(c => c.Id == id);
-            await _cartService.SetCartProductCount();
             return View(category);
         }
 

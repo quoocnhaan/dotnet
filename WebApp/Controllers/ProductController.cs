@@ -18,14 +18,13 @@ namespace WebApp.Controllers
             _cartService = cartService;
         }
 
-        public async Task<IActionResult> Index()
+        public IActionResult Index()
         {
             List<Product> products = _context.Products.Include(p => p.Category).ToList();
-            await _cartService.SetCartProductCount();
             return View(products);
         }
 
-        public async Task<IActionResult> Detail(int id)
+        public IActionResult Detail(int id)
         {
             var product = _context.Products
                                   .Include(p => p.Category)
@@ -34,30 +33,26 @@ namespace WebApp.Controllers
             if (product == null)
                 return NotFound();
 
-            await _cartService.SetCartProductCount();
             return View(product);
         }
 
-        public async Task<IActionResult> Create()
+        public IActionResult Create()
         {
             ViewData["Category"] = _context.Categories.ToList();
-            await _cartService.SetCartProductCount();
 
             return View("Upsert", new Product());
         }
 
-        public async Task<IActionResult> Edit(int id)
+        public IActionResult Edit(int id)
         {
             ViewData["Category"] = _context.Categories.ToList();
             var product = _context.Products.Include(p => p.Category).FirstOrDefault(p => p.Id == id);
-            await _cartService.SetCartProductCount();
             return View("Upsert", product);
         }
 
-        public async Task<IActionResult> Delete(int id)
+        public IActionResult Delete(int id)
         {
             var product = _context.Products.Find(id);
-            await _cartService.SetCartProductCount();
             return View(product);
         }
 
