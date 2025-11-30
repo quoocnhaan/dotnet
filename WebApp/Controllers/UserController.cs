@@ -47,7 +47,7 @@ namespace WebApp.Controllers
                 var result = await _signInManager.PasswordSignInAsync(model.UserName, model.Password, model.RememberMe, lockoutOnFailure: false);
                 if (result.Succeeded)
                 {
-                    _cartService.fetchNewDataAsync().Wait();
+                    await _cartService.fetchNewDataAsync();
                     return RedirectToAction("Index", "Home");
                 }
                 else
@@ -98,8 +98,8 @@ namespace WebApp.Controllers
                 if (result.Succeeded)
                 {
                     await _signInManager.SignInAsync(user, isPersistent: false);
-                    _cartService.CreateNewCartAsync().Wait();
-                    _cartService.fetchNewDataAsync().Wait();
+                    await _cartService.CreateNewCartAsync();
+                    await _cartService.fetchNewDataAsync();
                     return LocalRedirect(returnUrl);
                 }
                 foreach (var error in result.Errors)

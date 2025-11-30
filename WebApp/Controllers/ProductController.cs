@@ -1,89 +1,73 @@
-﻿using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using System.Threading.Tasks;
+using WebApp.Controllers;
 using WebApp.Data;
 using WebApp.Models;
 using WebApp.Service;
 
-namespace WebApp.Controllers
+public class ProductController : BaseController
 {
-    public class ProductController : BaseController
+    private readonly ProductService _productService;
+
+    public ProductController(
+        IDbContextFactory<AppDBContext> context,
+        ProductService productService,
+        CartService cartService,
+        UserService userService)
+        : base(context, userService)
     {
-        private readonly CartService _cartService;
+        _productService = productService;
+    }
 
-        public ProductController(IDbContextFactory<AppDBContext> context, CartService cartService, UserService userService)
-            : base(context, userService)
-        {
-            _cartService = cartService;
-        }
+    public async Task<IActionResult> Index()
+    {
+        var products = await _productService.GetAllAsync();
+        return View(products);
+    }
 
-        public IActionResult Index()
-        {
-            List<Product> products = _context.Products.Include(p => p.Category).ToList();
-            return View(products);
-        }
+    public async Task<IActionResult> Detail(int id)
+    {
+        var product = await _productService.GetByIdAsync(id);
+        if (product == null) return NotFound();
 
-        public IActionResult Detail(int id)
-        {
-            var product = _context.Products
-                                  .Include(p => p.Category)
-                                  .FirstOrDefault(p => p.Id == id);
+        return View(product);
+    }
 
-            if (product == null)
-                return NotFound();
+    public async Task<IActionResult> Create()
+    {
+        ViewData["Category"] = await _productService.GetCategoriesAsync();
+        return View("Upsert", new Product());
+    }
 
-            return View(product);
-        }
+    public async Task<IActionResult> Edit(int id)
+    {
+        ViewData["Category"] = await _productService.GetCategoriesAsync();
+        var product = await _productService.GetByIdAsync(id);
 
-        public IActionResult Create()
-        {
-            ViewData["Category"] = _context.Categories.ToList();
+        if (product == null) return NotFound();
+        return View("Upsert", product);
+    }
 
-            return View("Upsert", new Product());
-        }
+    [HttpPost]
+    public async Task<IActionResult> Upsert(Product model)
+    {
+        if (!ModelState.IsValid) return View("Upsert", model);
 
-        public IActionResult Edit(int id)
-        {
-            ViewData["Category"] = _context.Categories.ToList();
-            var product = _context.Products.Include(p => p.Category).FirstOrDefault(p => p.Id == id);
-            return View("Upsert", product);
-        }
+        await _productService.UpsertAsync(model);
+        return RedirectToAction("Index");
+    }
 
-        public IActionResult Delete(int id)
-        {
-            var product = _context.Products.Find(id);
-            return View(product);
-        }
+    public async Task<IActionResult> Delete(int id)
+    {
+        var product = await _productService.GetByIdAsync(id);
+        if (product == null) return NotFound();
+        return View(product);
+    }
 
-        [HttpPost]
-        public IActionResult Upsert(Product model)
-        {
-            if (!ModelState.IsValid)
-                return View(model);
-
-            if (model.Id == 0)
-            {
-                _context.Products.Add(model);
-            }
-            else
-            {
-                _context.Products.Update(model);
-            }
-
-            _context.SaveChanges();
-            return RedirectToAction("Index");
-        }
-
-        [HttpPost]
-        public IActionResult DeleteConfirmed(int id)
-        {
-            var product = _context.Products.Find(id);
-            if (product == null) return NotFound();
-
-            _context.Products.Remove(product);
-            _context.SaveChanges();
-            return RedirectToAction("Index");
-        }
+    [HttpPost]
+    public async Task<IActionResult> DeleteConfirmed(int id)
+    {
+        await _productService.DeleteAsync(id);
+        return RedirectToAction("Index");
     }
 }

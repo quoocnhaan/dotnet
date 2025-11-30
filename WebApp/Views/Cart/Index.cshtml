@@ -8,7 +8,10 @@
 }
 <div class="container">
     <div class="cart_inner">
-
+        @if (TempData["CartWarnings"] != null)
+        {
+            <div class="alert alert-warning">@Html.Raw(TempData["CartWarnings"])</div>
+        }
         <form asp-controller="Cart" asp-action="Update" method="post">
             <div class="table-responsive">
                 <table class="table">

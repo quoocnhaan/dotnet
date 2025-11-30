@@ -19,9 +19,9 @@ namespace WebApp.Controllers
             return View();
         }
 
-        public IActionResult CheckOut() 
+        public async Task<IActionResult> CheckOutAsync() 
         {
-            _orderService.CheckOutAsync().Wait();
+            await _orderService.CheckOutAsync();
             return RedirectToAction("Index", "Cart");
         }
     }

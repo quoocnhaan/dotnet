@@ -24,10 +24,10 @@ namespace WebApp.Controllers
         }
 
 
-        public IActionResult Index()
+        public async Task<IActionResult> IndexAsync()
         {           
             List<Product> products = _context.Products.ToList();
-            _cartService.SetCartProductCount().Wait();
+            await _cartService.SetCartProductCount();
             return View(products);
         }
 

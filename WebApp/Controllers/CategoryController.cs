@@ -1,7 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using System.Threading.Tasks;
 using WebApp.Data;
 using WebApp.Models;
 using WebApp.Service;
@@ -10,18 +8,28 @@ namespace WebApp.Controllers
 {
     public class CategoryController : BaseController
     {
-        private readonly CartService _cartService;
+        private readonly CategoryService _categoryService;
 
-        public CategoryController(IDbContextFactory<AppDBContext> context, CartService cartService, UserService userService)
-    : base(context, userService)
+        public CategoryController(
+            IDbContextFactory<AppDBContext> contextFactory,
+            CartService cartService,
+            UserService userService,
+            CategoryService categoryService
+        ) : base(contextFactory, userService)
         {
-            _cartService = cartService;
+            _categoryService = categoryService;
         }
-        public IActionResult Index()
-        {
-            List<Category> categories = _context.Categories.Include(c => c.Products).ToList();
 
+        public async Task<IActionResult> Index()
+        {
+            var categories = await _categoryService.GetAllAsync();
             return View(categories);
+        }
+
+        public async Task<IActionResult> Edit(int id)
+        {
+            var category = await _categoryService.GetByIdAsync(id);
+            return View("Upsert", category);
         }
 
         public IActionResult Create()
@@ -29,46 +37,30 @@ namespace WebApp.Controllers
             return View("Upsert", new Category());
         }
 
-        public IActionResult Edit(int id)
-        {
-            var category = _context.Categories.FirstOrDefault(c => c.Id == id);
-            return View("Upsert", category);
-        }
-
-        public IActionResult Delete(int id)
-        {
-            var category = _context.Categories.FirstOrDefault(c => c.Id == id);
-            return View(category);
-        }
-
         [HttpPost]
-        public IActionResult Upsert(Category model)
+        public async Task<IActionResult> Upsert(Category model)
         {
             if (!ModelState.IsValid)
                 return View(model);
 
-            if (model.Id == 0)
-            {
-                _context.Categories.Add(model);
-            }
-            else
-            {
-                _context.Categories.Update(model);
-            }
-
-            _context.SaveChanges();
-            return RedirectToAction("Index");
+            await _categoryService.UpsertAsync(model);
+            return RedirectToAction(nameof(Index));
         }
 
-        [HttpPost]    
-        public IActionResult DeleteConfirmed(int id)
+        public async Task<IActionResult> Delete(int id)
         {
-            var category = _context.Categories.Find(id);
+            var category = await _categoryService.GetByIdAsync(id);
             if (category == null) return NotFound();
+            return View(category);
+        }
 
-            _context.Categories.Remove(category);
-            _context.SaveChanges();
-            return RedirectToAction("Index");
+        [HttpPost]
+        public async Task<IActionResult> DeleteConfirmed(int id)
+        {
+            bool success = await _categoryService.DeleteAsync(id);
+            if (!success) return NotFound();
+
+            return RedirectToAction(nameof(Index));
         }
     }
 }

@@ -28,6 +28,11 @@ namespace WebApp.Controllers
             {
                 return RedirectToAction("Login", "User");
             }
+            var warnings = await _cartService.ValidateAndFixCartAsync();
+            if (warnings.Any())
+            {
+                TempData["CartWarnings"] = string.Join("<br>", warnings);
+            }
             return View(await _cartService.GetCartItems());
         }
 
@@ -96,26 +101,7 @@ namespace WebApp.Controllers
             }
             else
             {
-                List<CartItem> cartItems = await _cartService.GetCartItems();
-                AppUser _user = await _userService.GetUser();
-
-                CartItem? cartItem = cartItems.Find(_ => _.ProductId == productId);
-                if (cartItem != null)
-                {
-                    cartItem.Quantity += quantity;
-                    _context.CartItems.Update(cartItem);
-                }
-                else
-                {
-                    Cart cart = _context.Carts.FirstOrDefault(_ => _.UserId == _user.Id);
-                    cartItem = new CartItem();
-                    cartItem.Cart = cart;
-                    cartItem.Product = _context.Products.FirstOrDefault(p => p.Id == productId);
-                    cartItem.Quantity = quantity;
-                    _context.CartItems.Add(cartItem);
-                }
-                _context.SaveChanges();
-                await _cartService.fetchNewDataAsync();
+                await _cartService.AddToCart(productId, quantity);
 
                 if (returnUrl != "/")
                 {
@@ -125,33 +111,11 @@ namespace WebApp.Controllers
             }
         }
 
-        public IActionResult Update(List<CartItemUpdateModel> cartItems, string returnUrl, string queryString)
+        public async Task<IActionResult> UpdateAsync(List<CartItemUpdateModel> cartItems, string returnUrl, string queryString)
         {
 
-            foreach (var newItem in cartItems)
-            {
-                var oldItem = _context.CartItems?.FirstOrDefault(ci => ci.Id == newItem.Id);
-                if (oldItem != null)
-                {
-                    int oldQuantity = oldItem.Quantity;
-                    int quantityDifference = newItem.Quantity - oldQuantity;
-
-                    if (newItem.Quantity == 0)
-                    {
-                        _context.CartItems.Remove(oldItem);
-                        _cartService.RemoveCartItemFromSession(oldItem.Id);
-                    }
-                    else
-                    {
-                        oldItem.Quantity = newItem.Quantity;
-                        _context.CartItems.Update(oldItem);
-                        _cartService.UpdateCartItemInSession(oldItem.Id, newItem.Quantity);
-                    }
-                }
-            }
-            _context.SaveChanges();
+            await _cartService.UpdateCart(cartItems);
             return RedirectToAction("Index");
         }
-
     }
 }

@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
 using System.Collections;
@@ -134,6 +135,111 @@ namespace WebApp.Service
                 return cart.CartItems.ToList();
             }
             return new List<CartItem>();
+        }
+
+        public async Task<List<string>> ValidateAndFixCartAsync()
+        {
+            var messages = new List<string>();
+            var user = await _userService.GetUser();
+
+            var cart = await _context.Carts
+                .Where(c => c.UserId == user.Id)
+                .Include(c => c.CartItems)
+                .ThenInclude(ci => ci.Product)
+                .FirstOrDefaultAsync();
+
+            if (cart == null || cart.CartItems.Count == 0)
+                return messages;
+
+            bool changed = false;
+
+            foreach (var item in cart.CartItems)
+            {
+                var product = item.Product;
+
+                if (product == null)
+                    continue;
+
+                if (product.Quantity <= 0)
+                {
+                    if (item.Quantity != 0)
+                    {
+                        item.Quantity = 0;
+                        changed = true;
+                        messages.Add($"{product.Name} is out of stock. Quantity updated to 0.");
+                    }
+                    continue;
+                }
+
+                if (item.Quantity > product.Quantity)
+                {
+                    int oldQty = item.Quantity;
+                    item.Quantity = product.Quantity;
+                    changed = true;
+
+                    messages.Add($"{product.Name}: quantity adjusted from {oldQty} → {product.Quantity} (max available).");
+                }
+            }
+
+            if (changed)
+            {
+                await _context.SaveChangesAsync();
+                await fetchNewDataAsync();
+            }
+
+            return messages;
+        }
+
+        public async Task AddToCart(int productId, int quantity = 1)
+        {
+
+            List<CartItem> cartItems = await GetCartItems();
+            AppUser _user = await _userService.GetUser();
+
+            CartItem? cartItem = cartItems.Find(_ => _.ProductId == productId);
+            if (cartItem != null)
+            {
+                cartItem.Quantity += quantity;
+                _context.CartItems.Update(cartItem);
+            }
+            else
+            {
+                Cart cart = _context.Carts.FirstOrDefault(_ => _.UserId == _user.Id);
+                cartItem = new CartItem();
+                cartItem.Cart = cart;
+                cartItem.Product = _context.Products.FirstOrDefault(p => p.Id == productId);
+                cartItem.Quantity = quantity;
+                _context.CartItems.Add(cartItem);
+            }
+            _context.SaveChanges();
+            await fetchNewDataAsync();
+        }
+
+        public async Task UpdateCart(List<CartItemUpdateModel> cartItems)
+        {
+
+            foreach (var newItem in cartItems)
+            {
+                var oldItem = _context.CartItems?.FirstOrDefault(ci => ci.Id == newItem.Id);
+                if (oldItem != null)
+                {
+                    int oldQuantity = oldItem.Quantity;
+                    int quantityDifference = newItem.Quantity - oldQuantity;
+
+                    if (newItem.Quantity == 0)
+                    {
+                        _context.CartItems.Remove(oldItem);
+                        await RemoveCartItemFromSession(oldItem.Id);
+                    }
+                    else
+                    {
+                        oldItem.Quantity = newItem.Quantity;
+                        _context.CartItems.Update(oldItem);
+                        await UpdateCartItemInSession(oldItem.Id, newItem.Quantity);
+                    }
+                }
+            }
+            _context.SaveChanges();
         }
     }
 }
