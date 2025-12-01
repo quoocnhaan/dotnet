@@ -23,7 +23,7 @@ namespace WebApp.Service
             _cartService = cartService;
         }
 
-        public async Task CheckOutAsync()
+        public async Task CheckOutAsync(CheckOutViewModel model)
         {
             var user = await _userService.GetUser();
             if (user == null)
@@ -38,6 +38,9 @@ namespace WebApp.Service
                 UserId = user.Id,
                 CreatedAt = DateTime.Today,
                 Status = Status.PENDING,
+                receiverName = model.FullName,
+                receiverPhone = model.PhoneNumber,
+                receiverAddress = model.Address,
                 OrderProducts = cartItems.Select(ci => new OrderProduct
                 {
                     ProductId = ci.ProductId,
@@ -64,7 +67,7 @@ namespace WebApp.Service
                     _context.Products.Update(product);
                 }
             }
-            _cartService.ClearCartAsync();
+            await _cartService.ClearCartAsync();
 
             _context.SaveChanges();
         }

@@ -1,0 +1,94 @@
+﻿@model WebApp.Models.CheckOutViewModel
+
+@{
+    ViewData["Title"] = "Checkout";
+
+    double grandTotal = Model.CartItems.Sum(ci => ci.GetTotal() ?? 0);
+}
+
+<div class="container mt-5">
+
+    <div class="row">
+
+        <!-- LEFT: Customer Info -->
+        <div class="col-md-6 mb-4">
+            <div class="card shadow-lg">
+                <div class="card-header bg-primary text-white text-center">
+                    <h4>Checkout Information</h4>
+                </div>
+
+                <div class="card-body">
+                    <form asp-action="Checkout" method="post">
+
+                        <div class="mb-3">
+                            <label asp-for="FullName" class="form-label">Full Name</label>
+                            <input asp-for="FullName" class="form-control" />
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Address" class="form-label">Address</label>
+                            <input asp-for="Address" class="form-control" />
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="PhoneNumber" class="form-label">Phone Number</label>
+                            <input asp-for="PhoneNumber" class="form-control" />
+                        </div>
+
+                        <button class="btn btn-success w-100">Place Order</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- RIGHT: Cart Items Summary -->
+        <div class="col-md-6">
+            <div class="card shadow-lg">
+                <div class="card-header bg-dark text-white text-center">
+                    <h4>Your Order</h4>
+                </div>
+
+                <div class="card-body">
+                    @if (Model.CartItems.Any())
+                    {
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Product</th>
+                                    <th>Qty</th>
+                                    <th>Total</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model.CartItems)
+                                {
+                                    <tr>
+                                        <td>
+                                            <strong>@item.Product?.Name</strong> <br />
+                                            <small>@item.Product?.GetPriceAfterDiscount().ToString("C") each</small>
+                                        </td>
+
+                                        <td>@item.Quantity</td>
+
+                                        <td>@(item.GetTotal()?.ToString("C"))</td>
+                                    </tr>
+                                }
+
+                                <tr class="table-secondary fw-bold">
+                                    <td colspan="2">Grand Total</td>
+                                    <td>@grandTotal.ToString("C")</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    }
+                    else
+                    {
+                        <p>Your cart is empty.</p>
+                    }
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>

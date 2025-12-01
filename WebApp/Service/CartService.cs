@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using AspNetCoreGeneratedDocument;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
@@ -35,6 +36,7 @@ namespace WebApp.Service
             int cartProductCount = cartItems != null ? cartItems.Sum(ci => ci.Quantity) : 0;
 
             Session.SetInt32("CartProductCount", cartProductCount);
+            
         }
 
         public async Task SaveCartSessionAsync(List<CartItem> ls)
@@ -63,6 +65,7 @@ namespace WebApp.Service
                     _context.CartItems.Remove(item);
                 }
             }
+            _context.SaveChanges();
         }
 
         public async Task fetchNewDataAsync()
@@ -72,11 +75,11 @@ namespace WebApp.Service
             Cart cart = _context.Carts.Include(c => c.CartItems).ThenInclude(ci => ci.Product).FirstOrDefault(c => c.UserId == user.Id);
             if(cart != null)
             {
-                SaveCartSessionAsync(cart.CartItems.ToList());
+                await SaveCartSessionAsync(cart.CartItems.ToList());
 
             } else
             {
-                SaveCartSessionAsync(new List<CartItem>());
+                await SaveCartSessionAsync(new List<CartItem>());
             }
         }
 
@@ -102,7 +105,7 @@ namespace WebApp.Service
             if (itemToRemove != null)
             {
                 items.Remove(itemToRemove);
-                SaveCartSessionAsync(items);
+                await SaveCartSessionAsync(items);
             }
         }
 
@@ -113,7 +116,7 @@ namespace WebApp.Service
             if (itemToUpdate != null)
             {
                 itemToUpdate.Quantity = newQuantity;
-                SaveCartSessionAsync(items);
+                await SaveCartSessionAsync(items);
             }
         }
 

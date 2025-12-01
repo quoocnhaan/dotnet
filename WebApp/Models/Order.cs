@@ -10,6 +10,9 @@ namespace WebApp.Models
         public string UserId { get; set; } = null!;
         public string? Status { get; set; }
         public DateTime? CreatedAt { get; set; }
+        public string receiverName { get; set; }
+        public string receiverPhone { get; set; }
+        public string receiverAddress { get; set; }
         public ICollection<OrderProduct>? OrderProducts { get; set; }
     
 
